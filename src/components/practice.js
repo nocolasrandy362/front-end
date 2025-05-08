@@ -1,10 +1,17 @@
 export const insertIntoSortedArray = (arr, x) => {
-    // 找插入位置
+    // Find insertion location
     let i = 0;
+
+    /* Iterate through the array arr starting from index 0, 
+     stopping either when the first element that is not less than x is found 
+     or when the end of the array is reached.​
+    */
     while (i < arr.length && arr[i] < x) {
         i++;
     }
-    // 插入元素
-    arr.splice(i, 0, x); // splice(index, 0, value) 表示在 index 位置插入 value
+    /*splice(index, 0, value) Indicates inserting value at index position 
+     without deleting any elements
+    */
+    arr.splice(i, 0, x);
     return arr;
 }
