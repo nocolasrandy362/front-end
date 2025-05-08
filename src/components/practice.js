@@ -1,3 +1,13 @@
+/***
+1.Insert Element into Sorted Sequence:
+
+ Given a sequence list, where the elements are arranged in ascending order,
+ design an algorithm to keep the sequence list in ascending order 
+ after inserting an element x 
+ (assuming that the insertion operation always succeeds)
+ 
+ ***/
+
 export const insertIntoSortedArray = (arr, x) => {
     // Find insertion location
     let i = 0;
