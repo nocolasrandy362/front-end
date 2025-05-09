@@ -21,8 +21,7 @@ import {
 onMounted(() => {
   // executeInsertIntoSortedArray()
   // executeDeleteElement()
-
-  console.log(createList([1, 3, 5, 7, 9]));
+executeMergeSortedLists()
 });
 const executeInsertIntoSortedArray = () => {
   const arr = [1, 3, 5, 7, 9];
@@ -54,8 +53,9 @@ const createList = (arr) => {
 };
 const executeMergeSortedLists = () => {
   // 测试
-  const A = createList([1, 3, 5]);
-  const B = createList([2, 4, 6]);
+  const A = createList([1, 3, 5,99]);
+  const B = createList([0, 0 ,1, 2, 4, 6]);
+  // important code !
   const C = mergeSortedLists(A, B);
 
   // 打印结果
