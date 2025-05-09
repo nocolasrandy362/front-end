@@ -21,7 +21,7 @@ import {
 onMounted(() => {
   // executeInsertIntoSortedArray()
   // executeDeleteElement()
-executeMergeSortedLists()
+  executeMergeSortedLists();
 });
 const executeInsertIntoSortedArray = () => {
   const arr = [1, 3, 5, 7, 9];
@@ -41,6 +41,14 @@ const executeDeleteElement = () => {
   console.log("更新后的顺序表：", L, L.length); // 输出: [10, 20, 40, 50]
 };
 
+/***
+ * Reference assignment *
+  const obj1 = { a: 1 }
+  const obj2 = obj1
+    obj2 does not contain a copy of obj1's data. Instead, it holds a reference to the same memory location as obj1.
+    Therefore, when you perform obj2.a = 2, the property a of the shared object in memory is updated
+    , which means obj1.a will also reflect this change.
+ ***/
 // 构建带头结点的链表
 const createList = (arr) => {
   const head = { next: null };
@@ -53,8 +61,8 @@ const createList = (arr) => {
 };
 const executeMergeSortedLists = () => {
   // 测试
-  const A = createList([1, 3, 5,99]);
-  const B = createList([0, 0 ,1, 2, 4, 6]);
+  const A = createList([1, 3, 5, 99]);
+  const B = createList([0, 0, 1, 2, 4, 6]);
   // important code !
   const C = mergeSortedLists(A, B);
 

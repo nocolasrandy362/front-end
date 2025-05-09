@@ -41,14 +41,11 @@ export const deleteElement = (L, p, eContainer) => {
 }
 
 export const mergeSortedLists = (A, B) => {
-    // 获取两个链表的首元结点（跳过头结点）
+    // Get the first node of two linked lists (skip the head node)
     let pa = A.next
     let pb = B.next
-
-    // 新链表 C 的头结点
     const C = { next: null }
-    let pc = C // pc 始终指向 C 的最后一个结点
-
+    let pc = C // pc always points to the last node of C
     while (pa && pb) {
         if (pa.value <= pb.value) {
             pc.next = pa
@@ -59,16 +56,14 @@ export const mergeSortedLists = (A, B) => {
         }
         pc = pc.next
     }
-
-    // 处理剩余的结点（pa 或 pb 其中一个不为空）
+    // Process the remaining nodes (one of pa or pb is not empty)
     pc.next = pa || pb
-
-    return C // 返回带头结点的链表
+    return C // Returns the linked list with the head node
 }
 
-// 引用传递案例
+// Pass by reference case
 const referencePass = () => {
-    // 构建一个简单链表
+    // Building a simple linked list
     const head = {
         value: 1,
         next: {
@@ -80,13 +75,13 @@ const referencePass = () => {
         }
     }
     let current = head
-    console.log("起始 current:", current) // 应该是 value: 1
-    // 第一次移动指针
+    console.log("起始 current:", current) //  value: 1
+    // Move the pointer for the first time
     current = current.next
-    console.log("第一次 current:", current) // 应该是 value: 2
-    // 第二次移动指针
+    console.log("第一次 current:", current) // value: 2
+    // Move the pointer a second time
     current = current.next
-    console.log("第二次 current:", current) // 应该是 value: 3
-    // 验证原链表没变
-    console.log("原始 head:", head)
+    console.log("第二次 current:", current) // value: 3
+    // Verify that the original linked list has not changed
+    console.log("original head:", head)
 }
