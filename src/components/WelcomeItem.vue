@@ -13,13 +13,60 @@
 </template>
 <script setup>
 import { ref, onMounted } from "vue";
-import { insertIntoSortedArray } from "./practice.js";
+import {
+  insertIntoSortedArray,
+  deleteElement,
+  mergeSortedLists,
+} from "./practice.js";
 onMounted(() => {
+  // executeInsertIntoSortedArray()
+  // executeDeleteElement()
+
+  console.log(createList([1, 3, 5, 7, 9]));
+});
+const executeInsertIntoSortedArray = () => {
   const arr = [1, 3, 5, 7, 9];
   const x = 6;
   console.log(insertIntoSortedArray(arr, x));
   // 输出: [1, 3, 5, 6, 7, 9]
-});
+};
+
+const executeDeleteElement = () => {
+  // 使用示例
+  const L = [10, 20, 30, 40, 50];
+  const eSave = ref();
+  console.log("删除前", L.length);
+  const result = deleteElement(L, 2, eSave);
+  console.log("删除结果：", result); // 输出: 1
+  console.log("被删除的元素值：", eSave.value); // 输出: 30
+  console.log("更新后的顺序表：", L, L.length); // 输出: [10, 20, 40, 50]
+};
+
+// 构建带头结点的链表
+const createList = (arr) => {
+  const head = { next: null };
+  let current = head;
+  for (const val of arr) {
+    current.next = { value: val, next: null };
+    current = current.next;
+  }
+  return head;
+};
+const executeMergeSortedLists = () => {
+  // 测试
+  const A = createList([1, 3, 5]);
+  const B = createList([2, 4, 6]);
+  const C = mergeSortedLists(A, B);
+
+  // 打印结果
+  let curr = C.next;
+  let result = [];
+  while (curr) {
+    result.push(curr.value);
+    curr = curr.next;
+  }
+  console.log(result); // 输出: [1, 2, 3, 4, 5, 6]
+};
 </script>
 <style scoped>
 .item {
