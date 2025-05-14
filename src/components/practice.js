@@ -95,6 +95,8 @@ const referencePass = () => {
 
 /*Find out whether there is a node with value x in linked list C (head node). 
   If so, delete the node and return 1, otherwise return 0. JavaScript implementation */
+// time complexity is O(n)
+// space complexity is O(1)
 const deleteNodeWithValue = (C, x) => {
     /* p points to the current node, prev is the previous node, 
        and initially points to the head node */
