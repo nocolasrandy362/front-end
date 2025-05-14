@@ -40,6 +40,12 @@ export const deleteElement = (L, p, eContainer) => {
     return 1;
 }
 
+
+/* The merging loop runs at most m + n times — each iteration moves either pa or pb.
+   Overall Time Complexity: O(m + n) */
+/* The merge operation does not create new nodes — it reuses existing ones by adjusting the next pointers.
+   Only constant extra space is used for pointers like pa, pb, and pc.
+   Space Complexity for Merge Step: O(1)   */
 export const mergeSortedLists = (A, B) => {
     // Get the first node of two linked lists (skip the head node)
     let pa = A.next
@@ -85,3 +91,47 @@ const referencePass = () => {
     // Verify that the original linked list has not changed
     console.log("original head:", head)
 }
+
+
+/*Find out whether there is a node with value x in linked list C (head node). 
+  If so, delete the node and return 1, otherwise return 0. JavaScript implementation */
+const deleteNodeWithValue = (C, x) => {
+    /* p points to the current node, prev is the previous node, 
+       and initially points to the head node */
+    let prev = C;
+    let p = C.next;
+
+    while (p !== null) {
+        if (p.val === x) {
+            // Delete node: prev.next skips the current node p
+            prev.next = p.next;
+            return 1; // Delete successfully
+        }
+        prev = p;
+        p = p.next;
+    }
+
+    return 0; // Not found, deletion failed
+};
+const buildSingleLinkList = (arr) => {
+    let head = { val: 0, next: null }; // dummy head
+    let current = head;
+    for (let val of arr) {
+        current.next = { val, next: null };
+        current = current.next;
+    }
+    return head;
+};
+
+export const executeDeleteNodeWithValue = () => {
+    let C = buildSingleLinkList([10, 20, 30, 40]);
+    console.log(deleteNodeWithValue(C, 30)); // 输出 1
+    console.log(deleteNodeWithValue(C, 50)); // 输出 0
+    // 打印链表结构
+    let curr = C.next;
+    while (curr) {
+        console.log(curr.val); // 应该输出 10, 20, 40
+        curr = curr.next;
+    }
+}
+

@@ -17,11 +17,13 @@ import {
   insertIntoSortedArray,
   deleteElement,
   mergeSortedLists,
+  executeDeleteNodeWithValue
 } from "./practice.js";
 onMounted(() => {
   // executeInsertIntoSortedArray()
   // executeDeleteElement()
-  executeMergeSortedLists();
+  // executeMergeSortedLists();
+  executeDeleteNodeWithValue()
 });
 const executeInsertIntoSortedArray = () => {
   const arr = [1, 3, 5, 7, 9];
