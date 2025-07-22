@@ -52,5 +52,18 @@ Called after the component has been fully destroyed.
 All directives have been unbound, and all event listeners removed.
 
 
+02
+
+Data observation is one of the core mechanisms of Vue. It enables Vue to track changes in data and automatically update the view. Vue uses Object.defineProperty (in Vue 2.x) or Proxy (in Vue 3.x) to implement data monitoring. （实施数据监控）
+
+Function:
+When you declare the data function of a component and return an object, Vue will recursively convert all the properties of that object into getter/setter forms.
+These getters and setters enable Vue to perform dependency tracking and update operations（依赖追踪并执行更新操作） when the data changes, thereby ensuring that the view can automatically reflect the latest state.
+------This passage describes the core feature of Vue: the Reactivity System.
+
+const variable = ref()    proxy   I'll study it later when I have more time.
+
+
+
 
 
