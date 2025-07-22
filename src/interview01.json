@@ -64,6 +64,14 @@ These getters and setters enable Vue to perform dependency tracking and update o
 const variable = ref()    proxy   I'll study it later when I have more time.
 
 
+03
+
+Component-based programming is a programming concept that divides a large software system into multiple small, independent components, each of which has specific functions and roles. 
+These components can be independently developed, tested, and maintained, 
+and can be flexibly combined and reused, thereby improving the development efficiency and quality of the software system.
+
+
+
 
 
 
