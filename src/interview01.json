@@ -1,0 +1,51 @@
+01
+The Vue instance lifecycle refers to the different stages a Vue component goes through from its creation to its destruction. 
+At each stage, Vue automatically calls specific lifecycle hooks, which allow developers to run code at key moments during the component’s life.
+
+These hooks are particularly useful for initializing data, making API requests, manipulating DOM elements, or cleaning up resources like timers or event listeners.
+
+Vue’s lifecycle can be divided into four main phases:
+
+1. Creation Phase
+These hooks are called when the Vue instance is being created.
+beforeCreate
+Called right after the instance is initialized.
+At this stage, data observation, computed properties, methods, and events have not been set up yet.
+created
+Called after the instance has been created.
+Data, methods, and events are now available. This is a good place to make API calls or initialize data.
+
+2. Mounting Phase
+The process in which a Vue instance first mounts a component and its template onto the DOM. 
+At this stage, the component's template is rendered into HTML and inserted into the page, and the component also executes the corresponding lifecycle hooks.
+
+beforeMount
+Called right before the initial render happens and the template is compiled. ==> Called right before (A and B)
+The $el property exists but hasn’t been mounted to the page yet.
+mounted
+Called after the component has been rendered and inserted into the DOM.
+Ideal for DOM manipulation or initializing third-party libraries.
+
+3. Updating Phase
+These hooks are triggered when reactive data changes and the component re-renders.
+
+beforeUpdate
+Called when data changes, but before the DOM is re-rendered.
+Useful if you need to access the DOM state before it is updated.
+
+updated
+Called after the DOM has been updated due to a data change.
+Use this hook to perform operations that depend on the updated DOM.
+
+4. Unmounting Phase
+These hooks are called when the component is being removed from the DOM.
+beforeUnmount(Vue 3) / beforeDestroy(Vue 2)
+Called just before the component is destroyed.
+This is a good place to clean up non-Vue resources such as timers, event listeners, or subscriptions.
+unmounted(Vue 3) / destroyed(Vue 2)
+Called after the component has been fully destroyed.
+All directives have been unbound, and all event listeners removed.
+
+
+
+
