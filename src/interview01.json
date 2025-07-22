@@ -28,20 +28,25 @@ Ideal for DOM manipulation or initializing third-party libraries.
 
 3. Updating Phase
 These hooks are triggered when reactive data changes and the component re-renders.
+It is a more clear, efficient and maintainable approach to prefer using computed properties and watchers instead of handling data changes directly in lifecycle hooks.
+However, in certain specific scenarios, lifecycle hooks are necessary.
 
-beforeUpdate
-Called when data changes, but before the DOM is re-rendered.
-Useful if you need to access the DOM state before it is updated.
+beforeUpdate -- Recommended usage scenarios
+some preparation before the DOM is updated.
+This is a good place to access the current DOM state before it changes.
 
-updated
-Called after the DOM has been updated due to a data change.
-Use this hook to perform operations that depend on the updated DOM.
+updated -- Recommended usage scenarios
+Called after the DOM has been updated with the new data.
+This is a good place to perform operations that depend on the updated DOM
+
 
 4. Unmounting Phase
 These hooks are called when the component is being removed from the DOM.
+
 beforeUnmount(Vue 3) / beforeDestroy(Vue 2)
 Called just before the component is destroyed.
 This is a good place to clean up non-Vue resources such as timers, event listeners, or subscriptions.
+
 unmounted(Vue 3) / destroyed(Vue 2)
 Called after the component has been fully destroyed.
 All directives have been unbound, and all event listeners removed.
