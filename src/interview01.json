@@ -70,6 +70,37 @@ Component-based programming is a programming concept that divides a large softwa
 These components can be independently developed, tested, and maintained, 
 and can be flexibly combined and reused, thereby improving the development efficiency and quality of the software system.
 
+04
+
+Computed is a computed property based on the Vue reactive system. 
+Its value is derived from one or more reactive data. 
+The characteristic of a computed property is that it is cached. 
+It will only recalculate the computed property when the dependent data changes; 
+otherwise, it will use the cached result.
+【Cache, recalculating only when there is a change.】
+
+
+methods 是在 Vue 中定义的普通方法，通常用于响应用户的操作或处理事件。每次调用 methods 中的方法时，都会重新执行函数体，不会缓存结果。
+"methods" is a common method defined in Vue, which is usually used to respond to user operations or handle events. 
+Every time a method in "methods" is called, the function body will be executed anew and the result will not be cached.
+// with && within
+// with ====
+// within Emphasize boundaries, limits and borders 
+// eg: The mistake was within acceptable limits.  这个错误在可接受的范围内。
+// eg: Please submit your report within 24 hours.
+
+
+// in ====
+// Used to describe something/someone being inside a certain space, range, environment, etc. 
+// Usually does not emphasize "boundaries" or "limitations"
+
+The "watch" function is used to observe the data changes within a Vue instance (including data, computed properties, props, etc.). 
+Whenever a data value changes, the watch function will automatically execute the specified callback function.
+
+
+05
+
+
 
 
 
