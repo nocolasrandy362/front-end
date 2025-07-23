@@ -111,7 +111,7 @@ Here are the most important functions that any ERC-20 compliant token must have:
 
 3. DeFi and DApps:
     DeFi platforms often use ERC-20 tokens to represent assets or perform financial operations such as lending, staking, and yield farming.
-
+去中心化金融平台通常会使用 ERC-20 代币来代表资产或执行诸如借贷、质押和收益耕种等金融操作。
 4. Gaming and NFTs:
     While ERC-20 is typically used for fungible tokens, some gaming platforms and NFT marketplaces use ERC-20 tokens as in-game currencies or for other purposes.
 
