@@ -33,7 +33,6 @@ Broadcast the result: Once a hash value that meets the conditions is found, the 
 Verify and add to the blockchain: Other nodes will verify the validity of the new block and then add it to their own blockchain copies.
 */
 
-
 // ERC-20
 /*
 ERC-20 is a technical standard for smart contract tokens on the Ethereum blockchain. It defines a set of rules and functions that a token contract must follow in order to be compatible with the Ethereum network. 
@@ -99,7 +98,6 @@ Here are the most important functions that any ERC-20 compliant token must have:
     Although ERC-20 tokens follow a standardized approach, the contracts themselves can still have bugs or vulnerabilities, 
     as seen in many high-profile token hacks or exploits.
     // 正如在许多高调的代币黑客攻击或利用事件中所见
-
 
 ### Use Cases of ERC-20 Tokens
 
