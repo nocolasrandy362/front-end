@@ -1,8 +1,29 @@
 <script setup>
 import { onMounted } from "vue";
 import WelcomeItem from "./components/WelcomeItem.vue";
+import { ethers } from 'ethers';
+
+// 使用 BSC 公共节点
+const provider = new ethers.JsonRpcProvider('https://bsc-dataseed.binance.org/');
+
+// 获取 BSC 网络的最新区块
+async function getLatestBlock() {
+  try {
+    const blockNumber = await provider.getBlockNumber();
+    console.log("BSC 最新区块号:", blockNumber);
+
+    const block = await provider.getBlock(blockNumber);
+    console.log("BSC 最新区块:", block);
+  } catch (error) {
+    console.error("获取区块信息失败:", error);
+  }
+}
+
 onMounted(() => {
-  console.log("test");
+
+getLatestBlock();
+  
+  console.log("test",);
   mergeList()
 });
 const buildSingleLinkList = (arr) => {
