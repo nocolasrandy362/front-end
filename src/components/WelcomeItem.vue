@@ -1,13 +1,7 @@
 <template>
   <div class="item">
-    <i>
-      <slot name="icon"></slot>
-    </i>
     <div class="details">
-      <h3>
-        <slot name="heading"></slot>
-      </h3>
-      <slot></slot>
+    <el-button @click="goEvent"> Default</el-button>
     </div>
   </div>
 </template>
@@ -77,6 +71,44 @@ const executeMergeSortedLists = () => {
   }
   console.log(result); // 输出: [1, 2, 3, 4, 5, 6]
 };
+
+const goEvent = () => {
+  connectMetaMask()
+  // 跳转到指定页面
+};
+
+const account = ref(null);
+    const contractResult = ref(null);
+
+    // 连接 MetaMask 钱包
+    const connectMetaMask = async () => {
+      if (typeof window.ethereum !== 'undefined') {
+        try {
+          const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+          account.value = accounts[0];
+          console.log('Connected accounts:', accounts);
+        } catch (error) {
+          console.error('User rejected the request:', error);
+        }
+      } else {
+        alert('MetaMask is not installed!');
+      }
+    };
+
+    // 监听账户和网络变化
+    // onMounted(() => {
+    //   if (typeof window.ethereum !== 'undefined') {
+    //     window.ethereum.on('accountsChanged', (accounts) => {
+    //       account.value = accounts[0];
+    //       console.log('Account changed:', accounts);
+    //     });
+
+    //     window.ethereum.on('chainChanged', (chainId) => {
+    //       console.log('Network changed:', chainId);
+    //     });
+    //   }
+    // });
+
 </script>
 <style scoped>
 .item {
