@@ -63,9 +63,9 @@ export default {
         // 假设你已经定义了 tokenA 和 tokenB 的地址
         const tokenA = "0xdac17f958d2ee523a2206206994597c13d831ec7"; // USDT 地址
         const tokenB = "0xc778417E063141139Fce010982780140Aa0cD5Ab"; // WETH 地址 (Wrapped Ether)
-
-        // 计算创建交易对的 gas 费用
-        const gasEstimate = await router.estimateGas.createPair(tokenA, tokenB);
+        const tokenC = "0x6b175474e89094c44da98b954eedeac495271d0f"; // 你可以添加更多的代币地址
+        // 计算创建交易对的 gas 费用 BC 2528078    AB 2528068    AC 已存在
+        const gasEstimate = await router.estimateGas.createPair(tokenB, tokenA);
         console.log("Estimated Gas:", gasEstimate.toString());
       } catch (error) {
         console.error("Error fetching amount out:", error);

@@ -81,15 +81,15 @@ const referencePass = () => {
         }
     }
     let current = head
-    console.log("起始 current:", current) //  value: 1
+    // console.log("起始 current:", current) //  value: 1
     // Move the pointer for the first time
     current = current.next
-    console.log("第一次 current:", current) // value: 2
+    // console.log("第一次 current:", current) // value: 2
     // Move the pointer a second time
     current = current.next
-    console.log("第二次 current:", current) // value: 3
+    // console.log("第二次 current:", current) // value: 3
     // Verify that the original linked list has not changed
-    console.log("original head:", head)
+    // console.log("original head:", head)
 }
 
 
@@ -127,12 +127,12 @@ const buildSingleLinkList = (arr) => {
 
 export const executeDeleteNodeWithValue = () => {
     let C = buildSingleLinkList([10, 20, 30, 40]);
-    console.log(deleteNodeWithValue(C, 30)); // 输出 1
-    console.log(deleteNodeWithValue(C, 50)); // 输出 0
+    // console.log(deleteNodeWithValue(C, 30)); // 输出 1
+    // console.log(deleteNodeWithValue(C, 50)); // 输出 0
     // 打印链表结构
     let curr = C.next;
     while (curr) {
-        console.log(curr.val); // 应该输出 10, 20, 40
+        // console.log(curr.val); // 应该输出 10, 20, 40
         curr = curr.next;
     }
 }
