@@ -1,6 +1,6 @@
 // N0.10
-
-/* The first surge in the price of bitcoin, to around $1,000 in 2013, minted cryptocurrency millionaires, provoked declarations of a bubble and left some early fans kicking themselves.
+/* 
+📌 The first surge in the price of bitcoin, to around $1,000 in 2013, minted cryptocurrency millionaires, provoked declarations of a bubble and left some early fans kicking themselves.
 
 a surge in...：表示“在……方面的激增”，是固定搭配
 minted。原义“铸造（硬币）”，此处为比喻用法，意为“造就
@@ -36,7 +36,6 @@ Enthusiasm or rapid growth in a particular area (such as a market, trend, or tec
 His theory is highly speculative and lacks solid evidence   ----   他的理论极具推测性，缺乏确凿证据。
 
 speculate：动词，意为“推测”、“猜测”或“投机”，在金融领域常指高风险的投资行为。
-
 Many experts have speculated that climate change could be accelerating the frequency of extreme weather events.
 许多专家推测，气候变化可能会加剧极端天气事件的发生频率。
 
@@ -60,62 +59,62 @@ Some investors prefer long-term saving over speculating on volatile cryptocurren
 ✅ 现在分词短语作状语：with prices soaring... and crashing...
 ✅ 动作对比强烈：soaring vs crashing
 
- Fuelled by casual speculators and market manipulation, its price surged to about $19,000 in December 2017; 
+📌 原文：Fuelled by casual speculators and market manipulation, its price surged to about $19,000 in December 2017; 
  “受业余投机者和市场操纵的推动，其价格在2017年12月飙升至约19,000美元。”
 
+end up doing sth：最终做了某事. end up in + 名词（place/state）	以……告终
 英语：We only had a casual conversation at the party, but it ended up changing my perspective on climate change.
-汉语：我们只是在派对上偶然聊了几句，却最终改变了我对气候变化的看法。
+汉语：我们只是在派对上偶然聊了几句，却最终改变了我对气候变化的看法。    
 
 英语：Many young people now take on 「 casual jobs 」 through apps, such as food delivery or ride-sharing, instead of full-time employment.
 汉语：如今，许多年轻人通过应用程序从事「 临时工作 」，如送餐或网约车，而非全职工作。
 
 over the next year it fell by more than four-fifths.    by：介词，用于表示变化的幅度
 
-Bitcoin's most recent ascent has been its giddiest yet. 比特币最近的上涨是迄今为止最疯狂的一次
+📌 Bitcoin's most recent ascent has been its giddiest yet. 比特币最近的上涨是迄今为止最疯狂的一次
 eg: Stock prices in tech companies have reached their most dramatic peak yet.  科技股的价格已经达到了迄今为止最戏剧性的高峰。
 
-Having tripled in three months its price is now over $35,000 and somewhere under Newport sits a computer part worth over $260m. 
+📌 Having tripled in three months its price is now over $35,000 and somewhere under Newport sits a computer part worth over $260m. 
 它在三个月内价格翻了三倍，目前已超过35,000美元；而在纽波特的某个地方，埋藏着一块价值超过2.6亿美元的电脑部件。
 
-Today's bitcoin enthusiasm is striking because basement-dwelling libertarians are not the only ones talking it up. 
-Some of Wall Street's finest have joined them. 
-Larry Fink of BlackRock, the world's largest asset manager, said in December that bitcoin could become a "global market".
+📌 Today's bitcoin enthusiasm is striking because basement-dwelling libertarians are not the only ones talking it up. 
+📌 Some of Wall Street's finest have joined them. 
+📌 Larry Fink of BlackRock, the world's largest asset manager, said in December that bitcoin could become a "global market".
 
-Big hedge funds such as Renaissance Technologies have been punting on cryptocurrencies.像文艺复兴科技公司这样的大型对冲基金一直在押注加密货币
+📌 Big hedge funds such as Renaissance Technologies have been punting on cryptocurrencies.像文艺复兴科技公司这样的大型对冲基金一直在押注加密货币
+
 have been punting：现在完成进行时态，表示一个从过去开始并一直持续到现在的动作
 punting on：动词短语，“押注于”或“投机于”，在金融领域中常用来描述高风险的投资行为
-*/
-/*
-Ruchir Sharma, a strategist at Morgan Stanley's investment arm（投资部门）, argues that America's mounting debts may make cryptocurrencies more appealing. 
 
-The total value of outstanding bitcoins exceeds that of Canadian dollars, narrowly defined to include banknotes and central-bank reserves. 
+📌 Ruchir Sharma, a strategist at Morgan Stanley's investment arm（投资部门）, argues that America's mounting debts may make cryptocurrencies more appealing. 
 
-But few of the new crypto converts think it has any chance of replacing government money — the dream of early believers. 
+📌 The total value of outstanding bitcoins exceeds that of Canadian dollars, narrowly defined to include banknotes and central-bank reserves. 
+
+📌 But few of the new crypto converts think it has any chance of replacing government money — the dream of early believers. 
 但新加入加密货币阵营的人中，很少有人认为它有机会取代政府发行的货币——这是早期信徒的梦想。
 
 It is far too inefficient to be of much use for making payments; 
 far too inefficient：效率低得太多了 / 非常低效
 be of much use：固定表达，意为“有很大用处”
 
-bitcoin is capable of processing fewer than ten transactions per second
-*/
-/*
-By contrast, the firms upending consumer finance, like Alipay and Venmo, minimise friction. 
+📌 bitcoin is capable of processing fewer than ten transactions per second
 
-Were that problem solved, governments would clamp down quickly on any technology that threatened their monetary sovereignty. 
+📌 By contrast, the firms upending consumer finance, like Alipay and Venmo, minimise friction. 
+
+📌 Were that problem solved, governments would clamp down quickly on any technology that threatened their monetary sovereignty. 
 // clamp down on 是固定搭配，意为“严厉打击、压制”
-Regulatory resistance has already forced Facebook's mooted（提出的） digital currency, Libra, to rebrand (to "Diem") and scale back its early ambition. 
+📌 Regulatory resistance has already forced Facebook's mooted（提出的） digital currency, Libra, to rebrand (to "Diem") and scale back its early ambition. 
 //slick digital currencies	精良的/流畅的数字货
 Meanwhile, the competition is heating up as central banks improve payments systems and launch slick digital currencies of their own.
 */
 
 /***
- Bitcoin mania is instead rooted in the possibility that it might eventually offer a safe store of value like gold,
+📌 Bitcoin mania is instead rooted in the possibility that it might eventually offer a safe store of value like gold,
  but more convenient (because it is easier to maintain a digital wallet than a physical vault). 
 
 
 
- Then it could win（可能赢得”或“有可能占据”） a small but permanent slice of investors' portfolios（投资者的资产组合）. 
+📌 Then it could win（可能赢得”或“有可能占据”） a small but permanent slice of investors' portfolios（投资者的资产组合）. 
  Like bitcoin, gold pays no interest or dividend. Unlike bitcoin, gold has fundamental uses, 
 
  but it is fluctuating demand from investors for the yellow metal, not jewellers and chipmakers, that drives prices.
@@ -124,21 +123,26 @@ Meanwhile, the competition is heating up as central banks improve payments syste
 
  // investor sentiment	投资者情绪
 
- It is therefore conceivable that bitcoin's high price could also prove self-sustaining.
+📌  It is therefore conceivable that bitcoin's high price could also prove self-sustaining.
 因此可以设想，比特币的高价也可能是自我维持的
 
-If bitcoin became as popular with investors as gold (measured by the market value of their positions) the price would rise to $146,000, calculates JPMorgan, a bank. 
+📌 If bitcoin became as popular with investors as gold (measured by the market value of their positions) the price would rise to $146,000, calculates JPMorgan, a bank. 
 (measured by the market value of their positions)  过去分词短语作补充说明，意为“以持仓市值衡量”
 
 
-Already, millennial investors appear to prefer cryptocurrencies to bullion.
+📌 Already, millennial investors appear to prefer cryptocurrencies to bullion.
 Already：副词，表示“已经”，强调事情正在发生
 millennial investors：千禧一代的投资者（通常指1980年代至1990年代中期出生的人）
 appear to prefer...：似乎更喜欢……
 cryptocurrencies：加密货币（复数）
 to bullion：黄金（金条、金块）
 
-There are plenty of reasons to doubt that bitcoin can emulate gold. Its price is much more volatile and moves with the stockmarket, which is hardly desirable for a supposed haven. 
- The market is illiquid and cryptocurrency trading remains a wild west in which fraud and theft are rampant, and which facilitates crimes such as selling drugs online.
+📌 There are plenty of reasons to doubt that bitcoin can emulate gold. 
+
+
+📌 Its price is much more volatile and moves with the stockmarket, which is hardly desirable for a supposed haven. 
+
+
+📌 The market is illiquid and cryptocurrency trading remains a wild west in which fraud and theft are rampant, and which facilitates crimes such as selling drugs online.
  * 
  */
