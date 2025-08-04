@@ -26,11 +26,11 @@ speculative： 推测的，猜测的，推断的；投机性的
 英文：I predict that the blockchain industry will receive even more attention next year.
 汉语：我推测明年的区块链产业会更加受到关注
 
-Although the scientist claimed that his discovery could revolutionize renewable energy, 
-drawing widespread media attention, further investigation revealed that the data was fabricated.
-尽管这位科学家声称他的发现可能 彻底改变可再生能源领域，从而引发了媒体的广泛关注，进一步的调查表明，这些数据是伪造的。
+英文：Although the scientist claimed that his discovery could revolutionize renewable energy, 
+     drawing widespread media attention, further investigation revealed that the data was fabricated.
+汉语：尽管这位科学家声称他的发现可能 彻底改变可再生能源领域，从而引发了媒体的广泛关注，进一步的调查表明，这些数据是伪造的。
 
-Enthusiasm or rapid growth in a particular area (such as a market, trend, or technology) has led people to claim that a speculative bubble is forming.
+📌 Enthusiasm or rapid growth in a particular area (such as a market, trend, or technology) has led people to claim that a speculative bubble is forming.
 某个特定领域（如市场、趋势或技术）的热情或快速增长，导致人们声称一个投机泡沫正在形成 ----- 某个特定领域（如市场、趋势或技术）所表现出的热情或快速增长，使人们认为一个投机泡沫正在形成。
 
 His theory is highly speculative and lacks solid evidence   ----   他的理论极具推测性，缺乏确凿证据。
