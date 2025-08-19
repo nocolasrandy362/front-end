@@ -67,7 +67,7 @@ Here are the most important functions that any ERC-20 compliant token must have:
 6. `allowance(address _owner, address _spender)`:
     Returns the amount of tokens that a spender is allowed to withdraw from the owner's account.
 
-    
+
 ### Advantages of ERC-20
 
 1. Wide Adoption:
@@ -116,6 +116,8 @@ Here are the most important functions that any ERC-20 compliant token must have:
 
 ### Conclusion
 ERC-20 is a widely adopted, standardized framework for creating tokens on the Ethereum blockchain. 
+
+
 It ensures interoperability and compatibility across Ethereum's decentralized ecosystem, 
 making it easier for developers and users to interact with various Ethereum-based applications. 
 Despite its success, newer standards (such as ERC-721 for NFTs and ERC-1155 for multi-token support) have emerged to cater to more complex use cases, 
