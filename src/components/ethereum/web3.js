@@ -69,6 +69,7 @@ Here are the most important functions that any ERC-20 compliant token must have:
 6. `allowance(address _owner, address _spender)`:
     Returns the amount of tokens that a spender is allowed to withdraw from the owner's account.
 
+    
 ### Advantages of ERC-20
 
 1. Wide Adoption:
