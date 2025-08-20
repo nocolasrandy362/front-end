@@ -55,7 +55,7 @@ Some investors prefer long-term saving over speculating on volatile cryptocurren
 汉语：在竞争激烈的市场中创办一家科技公司真是一段过山车般的经历，充满了意外的挫折和突如其来的突破。
 
 英语：Investing in cryptocurrency over the past decade has been a wild ride, with prices soaring to record highs and crashing just weeks later.
-汉语：过去十年投资加密货币可谓一场过山车之旅，价格一度飙升至历史新高，几周后又暴跌。
+汉语：过去十年投资加密货币可谓一场过山车之旅，价格一度飙升至历史新高，几周后又暴跌
 ✅ 现在分词短语作状语：with prices soaring... and crashing...
 ✅ 动作对比强烈：soaring vs crashing
 
@@ -76,6 +76,9 @@ eg: Stock prices in tech companies have reached their most dramatic peak yet.  �
 
 📌 Having tripled in three months its price is now over $35,000 and somewhere under Newport sits a computer part worth over $260m. 
 它在三个月内价格翻了三倍，目前已超过35,000美元；而在纽波特的某个地方，埋藏着一块价值超过2.6亿美元的电脑部件。
+
+
+
 
 📌 Today's bitcoin enthusiasm is striking because basement-dwelling libertarians are not the only ones talking it up. 
 📌 Some of Wall Street's finest have joined them. 

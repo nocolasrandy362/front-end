@@ -1,6 +1,7 @@
 // 共识机制 复习01
 /*
 The consensus mechanism refers to a protocol or algorithm used to ensure that all nodes in a blockchain network reach an agreement on the validity of transactions and blocks. 
+
 It guarantees that in a decentralized network, all participants (nodes) can reach a consensus on the state of the blockchain, 
 thereby maintaining the consistency and security of the data.
 /
@@ -26,6 +27,7 @@ Combine A with B	将 A 与 B 结合
 Construct the candidate block: Combine these transactions with the hash value, timestamp and other information of the previous block to form a "candidate block".
 
 Solve the puzzle: Miners need to find a specific value (nonce) such that the hash value of the candidate block meets certain conditions (for example, starting with several zeros). 
+这里的 "such that" 是一个常用的数学和逻辑表达，意思是 “使得” 或 “以使得
 This process requires a large number of computational attempts, and is therefore called "proof of work".
 
 Broadcast the result: Once a hash value that meets the conditions is found, the miner will broadcast the newly discovered block to the entire network.
