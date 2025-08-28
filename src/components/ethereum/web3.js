@@ -123,3 +123,11 @@ making it easier for developers and users to interact with various Ethereum-base
 Despite its success, newer standards (such as ERC-721 for NFTs and ERC-1155 for multi-token support) have emerged to cater to more complex use cases, 
 but ERC-20 remains the dominant token standard on Ethereum.
 */
+/*
+China's reform and opening-up could be described as a mighty tide, with everyone caught in its current. 
+During this period, many people, 
+through their own efforts or perhaps luck, have managed to stand at the forefront of the tide. 
+At the forefront, there is endless glory, endless temptation, and also endless risk — it all depends on how you handle it. 
+Looking into the future is never as clear as looking back at the past, 
+yet excitement and confusion are intertwined in everyone's heart.
+*/
