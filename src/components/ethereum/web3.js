@@ -68,7 +68,7 @@ Here are the most important functions that any ERC-20 compliant token must have:
     provided 是一个连词，用于引导条件状语从句，相当于“if only”或“as long as”，意思是“只要……”。
 6. `allowance(address _owner, address _spender)`:
     Returns the amount of tokens that a spender is allowed to withdraw from the owner's account.
-
+-----A spender is allowed to withdraw the amount of tokens from the owner's account.
     
 ### Advantages of ERC-20
 
