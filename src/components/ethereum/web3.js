@@ -47,6 +47,7 @@ The term ERC stands for "Ethereum Request for Comments," and 20 is the proposal 
 
 3. Token Functions: The standard specifies several key functions that a token smart contract must implement to work on Ethereum. 
 These include basic functions for transferring tokens, checking balances, and approving other addresses to spend a certain amount of tokens.
+"to work on Ethereum" 修饰的是 "implement"，意思是“为了（这个智能合约）能够在以太坊上运行，它必须实现这些函数”
 
 ### ERC-20 Standard Functions
 Here are the most important functions that any ERC-20 compliant token must have:
@@ -85,7 +86,7 @@ Here are the most important functions that any ERC-20 compliant token must have:
 
 4. Security:
     Since ERC-20 tokens are based on Ethereum’s smart contracts, they inherit Ethereum's security model, which is one of the most secure blockchain architectures available.
-
+    "available" 就是一个典型的、经常后置的形容词
 ### Disadvantages of ERC-20
 
 1. Lack of Flexibility:
@@ -106,12 +107,30 @@ Here are the most important functions that any ERC-20 compliant token must have:
 
 1. Initial Coin Offerings (ICOs):
     Many projects use ERC-20 tokens to raise funds through ICOs. These tokens are issued to investors in exchange for cryptocurrencies like Ether (ETH) during a fundraising event.
-
+    in exchange for 以换取
+    项目方（发行代币的一方） 用 ERC-20 代币 (ERC-20 tokens) 换取了 加密货币（如以太币 Ether）。
+投资者（购买代币的一方） 用 加密货币（如以太币 Ether） 换取了 ERC-20 代币。
+详细分解
+谁在交换？
+一方是项目方（"Many projects"），他们需要资金来开发项目。
+另一方是投资者（"investors"），他们看好项目，愿意投资。
+交换的内容是什么？
+项目方给出的东西： 他们新发行的 ERC-20 代币。
+项目方得到的东西： 投资者支付的主流加密货币，特别是 以太币 (Ether)。
+投资者给出的东西： 他们持有的加密货币（如以太币）。
+投资者得到的东西： 项目方发行的 ERC-20 代币。
 2. Stablecoins:
     Several stablecoins, such as Tether (USDT) and USD Coin (USDC), are ERC-20 tokens. They are used to maintain a stable value (usually pegged to a fiat currency like the US Dollar).
 
 3. DeFi and DApps:
     DeFi platforms often use ERC-20 tokens to represent assets or perform financial operations such as lending, staking, and yield farming.
+
+
+     lending, 
+     staking, 
+     yield farming.
+
+
 去中心化金融平台通常会使用 ERC-20 代币来代表资产或执行诸如借贷、质押和收益耕种等金融操作。
 4. Gaming and NFTs:
     While ERC-20 is typically used for fungible tokens, some gaming platforms and NFT marketplaces use ERC-20 tokens as in-game currencies or for other purposes.
