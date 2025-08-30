@@ -29,6 +29,7 @@ Construct the candidate block: Combine these transactions with the hash value, t
 Solve the puzzle: Miners need to find a specific value (nonce) such that the hash value of the candidate block meets certain conditions (for example, starting with several zeros). 
 这里的 "such that" 是一个常用的数学和逻辑表达，意思是 “使得” 或 “以使得
 This process requires a large number of computational attempts, and is therefore called "proof of work".
+Find a number x such that x² = 4. (找一个数 x，使得 x 的平方等于 4。)
 
 Broadcast the result: Once a hash value that meets the conditions is found, the miner will broadcast the newly discovered block to the entire network.
 
