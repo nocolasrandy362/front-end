@@ -181,7 +181,7 @@ unless they are issued by a permitted payment stablecoin issuer.
 
 Digital asset service providers are prohibited from offering payment stablecoins issued by foreign payment stablecoin issuers 
 unless the issuer has the technological capability to comply with any lawful order or reciprocal arrangement pursuant to（according to） Section 18, 
-which delineates a process for foreign payment stablecoin issuers licensed under comparable foreign regimes to offer their payment stablecoins in the U.S
+which delineates a process for foreign payment stablecoin issuers licensed under comparable foreign regimes 「 to offer their payment stablecoins 」 in the U.S
 
 数字资产服务提供商被禁止提供（发行）由外国支付型稳定币发行方发行的支付型稳定币，
 除非该发行方具备技术能力，能够遵守根据第18条发布的任何合法命令或互惠安排
