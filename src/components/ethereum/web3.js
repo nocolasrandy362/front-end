@@ -47,6 +47,10 @@ The term ERC stands for "Ethereum Request for Comments," and 20 is the proposal 
 2. Interoperability: By following the ERC-20 standard, tokens can be easily integrated into Ethereum-based platforms and used across a wide variety of decentralized services.
 
 3. Token Functions: The standard specifies several key functions that a token smart contract must implement to work on Ethereum. 
+-----------------上句等同：For a token smart contract to work on Ethereum, the standard specifies several key functions that it must implement.
+-----------------上句等同：In order for a token smart contract to work on Ethereum, the standard specifies several key functions that it must implement.
+🔹 汉语：为了让一个代币智能合约能在以太坊上运行，该标准规定了它必须实现的几个关键功能
+
 These include basic functions for transferring tokens, checking balances, and approving other addresses to spend a certain amount of tokens.
 "to work on Ethereum" 修饰的是 "implement"，意思是“为了（这个智能合约）能够在以太坊上运行，它必须实现这些函数”
 
@@ -96,7 +100,7 @@ Here are the most important functions that any ERC-20 compliant token must have:
     While ERC-20 is widely adopted, it does not allow for more complex features, such as creating multiple types of assets (e.g., non-fungible tokens, NFTs) or managing assets with more granular controls (e.g., fungible and non-fungible assets in the same contract).
 //  allow for  使……成为可能、允许有……的可能
 //  allow sb. to do sth.   允许某人做某事
-2. Scalability and Gas Fees:
+2. Scalability (可扩展性) and Gas Fees:
     Like any operation on the Ethereum network, transactions involving ERC-20 tokens require gas, which is the computational fee paid to miners. 
     High gas fees can make using ERC-20 tokens costly during periods of network congestion.
     在网络拥堵期间，高昂的 Gas 费用会使使用 ERC-20 代币变得昂贵。
@@ -186,14 +190,17 @@ which delineates a process for foreign payment stablecoin issuers licensed under
 而且那个国家的监管标准和美国“差不多严格”，那么美国就给他们开个“绿色通道”，让他们也能在美国卖自己的稳定币。
 
 ----------为什么要有这个机制？——政策目的  Why is there such a mechanism? -- Policy Objectives
-避免重复监管
+避免重复监管                             Avoid repetitive supervision
 不要求外国公司再在美国从头申请一遍牌照（节省资源）。
-促进跨境金融合作
+Foreign companies are not required to apply for licenses all over again in the United States (to save resources).
+促进跨境金融合作 Promote cross-border financial cooperation
 鼓励与监管标准高的国家建立互认机制（类似“监管同盟”）。
-防止监管套利
+Encourage the establishment of mutual recognition mechanisms (similar to "regulatory alliances") with countries that have high regulatory standards.
+防止监管套利  Prevent regulatory arbitrage
 如果没有“类似监管”的要求，一些公司可能会去监管宽松的小国注册，然后“曲线进入”美国市场。这条规定堵住了这个漏洞。
-保障美国金融安全
+If there were no "similar regulatory" requirements, some companies might register in small countries with lenient regulations and then "indirectly enter" the US market. This regulation plugged this loophole.
+保障美国金融安全 Ensure the financial security of the United States
 只有能被监管、能配合执法（如冻结非法资金）的外国稳定币才能进来。
-
+Only foreign stablecoins that can be regulated and cooperate with law enforcement (such as freezing illegal funds) can enter.
 --------------------------------------------
 */
