@@ -180,10 +180,11 @@ unless they are issued by a permitted payment stablecoin issuer.
 在该法案通过三年后，数字资产服务提供商将被禁止提供或销售支付型稳定币，除非这些稳定币是由被许可的支付型稳定币发行方发行的
 
 Digital asset service providers are prohibited from offering payment stablecoins issued by foreign payment stablecoin issuers 
-unless the issuer has the technological capability to comply with any lawful order or reciprocal arrangement pursuant to Section 18, 
+unless the issuer has the technological capability to comply with any lawful order or reciprocal arrangement pursuant to（according to） Section 18, 
 which delineates a process for foreign payment stablecoin issuers licensed under comparable foreign regimes to offer their payment stablecoins in the U.S
 
-数字资产服务提供商被禁止提供（发行）由外国支付型稳定币发行方发行的支付型稳定币，除非该发行方具备技术能力，能够遵守根据第18条发布的任何合法命令或互惠安排
+数字资产服务提供商被禁止提供（发行）由外国支付型稳定币发行方发行的支付型稳定币，
+除非该发行方具备技术能力，能够遵守根据第18条发布的任何合法命令或互惠安排
 该条款规定了一个流程，允许在类似外国监管制度下获得许可的外国支付型稳定币发行方在美国提供其支付型稳定币。
 
 先看这句话的核心意思（大白话版）：
