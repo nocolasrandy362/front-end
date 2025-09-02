@@ -154,4 +154,30 @@ through their own efforts or perhaps luck, have managed to stand at the forefron
 At the forefront, there is endless glory, endless temptation, and also endless risk — it all depends on how you handle it. 
 Looking into the future is never as clear as looking back at the past, 
 yet excitement and confusion are intertwined in everyone's heart.
+
+《Section-by-Section: Guiding and Establishing National Innovation for U.S. Stablecoins Act or the “GENIUS Act”》
+Sec. 3 Issuance and treatment of payment stablecoins  支付稳定币的 发行和处理
+Section 3 prohibits the issuance of payment stablecoins in the United States 
+by any entity other than those approved as permitted stablecoin issuers under the bill upon enactment. 
+
+第3条禁止任何未经批准为本法案通过时所允许的稳定币发行机构的实体，在美国发行支付型稳定币。
+（更通顺的翻译：）
+第3条规定，在该法案生效时，只有被批准为许可稳定币发行方的实体，才可在美发行支付型稳定币；其他任何实体均被禁止发行。
+
+those
+└── approved 
+    ├── under the bill        → 依据什么被批准？
+    └── upon enactment        → 什么时候被批准？
+
+
+Three years after the bill is enacted, digital asset service providers will be prohibited from offering or selling payment stablecoins 
+unless they are issued by a permitted payment stablecoin issuer. 
+在该法案通过三年后，数字资产服务提供商将被禁止提供或销售支付型稳定币，除非这些稳定币是由被许可的支付型稳定币发行方发行的
+
+Digital asset service providers are prohibited from offering payment stablecoins issued by foreign payment stablecoin issuers 
+unless the issuer has the technological capability to comply with any lawful order or reciprocal arrangement pursuant to Section 18, 
+which delineates a process for foreign payment stablecoin issuers licensed under comparable foreign regimes to offer their payment stablecoins in the U.S
+
+数字资产服务提供商被禁止提供由外国支付型稳定币发行方发行的支付型稳定币，除非该发行方具备技术能力，能够遵守根据第18条发布的任何合法命令或互惠安排
+该条款规定了一个流程，允许在类似外国监管制度下获得许可的外国支付型稳定币发行方在美国提供其支付型稳定币。
 */
