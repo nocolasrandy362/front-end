@@ -143,7 +143,7 @@ to bullion：黄金（金条、金块）
 📌 There are plenty of reasons to doubt that bitcoin can emulate gold. 
 
 
-📌 Its price is much more volatile and moves with the stockmarket, which is hardly desirable for a supposed haven. 
+📌 Its price is much more volatile and moves with the stockmarket, which is hardly desirable for a supposed haven（所谓的避难所）. 
 
 
 📌 The market is illiquid and cryptocurrency trading remains a wild west in which fraud and theft are rampant, 
@@ -151,6 +151,7 @@ to bullion：黄金（金条、金块）
     -----在大多数情况下，“in which” 可以被 “where” 替换-----
 
 英语：The online marketplace is a place in which 「 digital fraud 」and 「 identity theft 」 have become increasingly rampant.
+      The online marketplace is a place ，in （the place） 「 digital fraud 」and 「 identity theft 」 have become increasingly rampant.
 汉语：这个网络交易市场是一个数字欺诈和身份盗窃日益猖獗的地方。
 
 Some small companies have illiquid assets, which are hard to sell quickly for cash.
