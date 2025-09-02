@@ -1,6 +1,7 @@
 // 共识机制 复习01
 /*
 The consensus mechanism refers to a protocol or algorithm used to ensure that all nodes in a blockchain network reach an agreement on the validity of transactions and blocks. 
+
 It guarantees that in a decentralized network, all participants (nodes) can reach a consensus on the state of the blockchain, 
 thereby maintaining the consistency and security of the data.
 /
@@ -26,7 +27,9 @@ Combine A with B	将 A 与 B 结合
 Construct the candidate block: Combine these transactions with the hash value, timestamp and other information of the previous block to form a "candidate block".
 
 Solve the puzzle: Miners need to find a specific value (nonce) such that the hash value of the candidate block meets certain conditions (for example, starting with several zeros). 
+这里的 "such that" 是一个常用的数学和逻辑表达，意思是 “使得” 或 “以使得
 This process requires a large number of computational attempts, and is therefore called "proof of work".
+Find a number x such that x² = 4. (找一个数 x，使得 x 的平方等于 4。)
 
 Broadcast the result: Once a hash value that meets the conditions is found, the miner will broadcast the newly discovered block to the entire network.
 
@@ -45,6 +48,7 @@ The term ERC stands for "Ethereum Request for Comments," and 20 is the proposal 
 
 3. Token Functions: The standard specifies several key functions that a token smart contract must implement to work on Ethereum. 
 These include basic functions for transferring tokens, checking balances, and approving other addresses to spend a certain amount of tokens.
+"to work on Ethereum" 修饰的是 "implement"，意思是“为了（这个智能合约）能够在以太坊上运行，它必须实现这些函数”
 
 ### ERC-20 Standard Functions
 Here are the most important functions that any ERC-20 compliant token must have:
@@ -68,6 +72,8 @@ Here are the most important functions that any ERC-20 compliant token must have:
     Returns the amount of tokens that a spender is allowed to withdraw from the owner's account.
 
 
+-----A spender is allowed to withdraw the amount of tokens from the owner's account.
+    
 ### Advantages of ERC-20
 
 1. Wide Adoption:
@@ -83,7 +89,7 @@ Here are the most important functions that any ERC-20 compliant token must have:
 
 4. Security:
     Since ERC-20 tokens are based on Ethereum’s smart contracts, they inherit Ethereum's security model, which is one of the most secure blockchain architectures available.
-
+    "available" 就是一个典型的、经常后置的形容词
 ### Disadvantages of ERC-20
 
 1. Lack of Flexibility:
@@ -104,12 +110,30 @@ Here are the most important functions that any ERC-20 compliant token must have:
 
 1. Initial Coin Offerings (ICOs):
     Many projects use ERC-20 tokens to raise funds through ICOs. These tokens are issued to investors in exchange for cryptocurrencies like Ether (ETH) during a fundraising event.
-
+    in exchange for 以换取
+    项目方（发行代币的一方） 用 ERC-20 代币 (ERC-20 tokens) 换取了 加密货币（如以太币 Ether）。
+投资者（购买代币的一方） 用 加密货币（如以太币 Ether） 换取了 ERC-20 代币。
+详细分解
+谁在交换？
+一方是项目方（"Many projects"），他们需要资金来开发项目。
+另一方是投资者（"investors"），他们看好项目，愿意投资。
+交换的内容是什么？
+项目方给出的东西： 他们新发行的 ERC-20 代币。
+项目方得到的东西： 投资者支付的主流加密货币，特别是 以太币 (Ether)。
+投资者给出的东西： 他们持有的加密货币（如以太币）。
+投资者得到的东西： 项目方发行的 ERC-20 代币。
 2. Stablecoins:
     Several stablecoins, such as Tether (USDT) and USD Coin (USDC), are ERC-20 tokens. They are used to maintain a stable value (usually pegged to a fiat currency like the US Dollar).
 
 3. DeFi and DApps:
     DeFi platforms often use ERC-20 tokens to represent assets or perform financial operations such as lending, staking, and yield farming.
+
+
+     lending, 
+     staking, 
+     yield farming.
+
+
 去中心化金融平台通常会使用 ERC-20 代币来代表资产或执行诸如借贷、质押和收益耕种等金融操作。
 4. Gaming and NFTs:
     While ERC-20 is typically used for fungible tokens, some gaming platforms and NFT marketplaces use ERC-20 tokens as in-game currencies or for other purposes.
@@ -122,4 +146,12 @@ It ensures interoperability and compatibility across Ethereum's decentralized ec
 making it easier for developers and users to interact with various Ethereum-based applications. 
 Despite its success, newer standards (such as ERC-721 for NFTs and ERC-1155 for multi-token support) have emerged to cater to more complex use cases, 
 but ERC-20 remains the dominant token standard on Ethereum.
+*/
+/*
+China's reform and opening-up could be described as a mighty tide, with everyone caught in its current. 
+During this period, many people, 
+through their own efforts or perhaps luck, have managed to stand at the forefront of the tide. 
+At the forefront, there is endless glory, endless temptation, and also endless risk — it all depends on how you handle it. 
+Looking into the future is never as clear as looking back at the past, 
+yet excitement and confusion are intertwined in everyone's heart.
 */
