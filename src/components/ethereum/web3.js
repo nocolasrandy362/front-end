@@ -47,6 +47,7 @@ The term ERC stands for "Ethereum Request for Comments," and 20 is the proposal 
 2. Interoperability: By following the ERC-20 standard, tokens can be easily integrated into Ethereum-based platforms and used across a wide variety of decentralized services.
 
 3. Token Functions: The standard specifies several key functions that a token smart contract must implement to work on Ethereum. 
+-----------------该标准规定了令牌智能合约必须实现的几个关键功能才能在以太坊上工作。
 -----------------上句等同：For a token smart contract to work on Ethereum, the standard specifies several key functions that it must implement.
 -----------------上句等同：In order for a token smart contract to work on Ethereum, the standard specifies several key functions that it must implement.
 🔹 汉语：为了让一个代币智能合约能在以太坊上运行，该标准规定了它必须实现的几个关键功能
