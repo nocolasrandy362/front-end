@@ -167,7 +167,7 @@ by any entity other than those approved as permitted stablecoin issuers under th
 those
 └── approved 
     ├── under the bill        → 依据什么被批准？
-    └── upon enactment        → 什么时候被批准？
+    └── upon enactment        → 什么时候被批准？  as soon as == upon
 
 
 Three years after the bill is enacted, digital asset service providers will be prohibited from offering or selling payment stablecoins 
@@ -185,7 +185,7 @@ which delineates a process for foreign payment stablecoin issuers licensed under
 如果一个外国公司（比如欧洲或日本的一家稳定币发行商）已经在自己的国家拿到了合法牌照，
 而且那个国家的监管标准和美国“差不多严格”，那么美国就给他们开个“绿色通道”，让他们也能在美国卖自己的稳定币。
 
-----------为什么要有这个机制？——政策目的
+----------为什么要有这个机制？——政策目的  Why is there such a mechanism? -- Policy Objectives
 避免重复监管
 不要求外国公司再在美国从头申请一遍牌照（节省资源）。
 促进跨境金融合作
