@@ -111,6 +111,34 @@ export const mergeSortedLists = (A, B) => {
     pc.next = pa || pb
     return C // Returns the linked list with the head node
 }
+    // const executeMergeSortedLists = () => {
+    // // 测试
+    // const A = createList([1, 3, 5, 99]);
+    // const B = createList([0, 0, 1, 2, 4, 6]);
+    // // important code !
+    // const C = mergeSortedLists(A, B);
+
+    // // 打印结果
+    // let curr = C.next;
+    // let result = [];
+    // while (curr) {
+    //     result.push(curr.value);
+    //     curr = curr.next;
+    // }
+    // console.log(result); // 输出: [1, 2, 3, 4, 5, 6]
+    // };
+
+    // 构建带头结点的链表
+    // const createList = (arr) => {
+    // const head = { next: null };
+        // let current = head;
+        // for (const val of arr) {
+        //     current.next = { value: val, next: null };
+        //     current = current.next;
+        // }
+    // return head;
+    // };
+
 
 // Pass by reference case
 const referencePass = () => {
