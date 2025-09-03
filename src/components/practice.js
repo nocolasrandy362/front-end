@@ -50,41 +50,41 @@ export const deleteElement = (L, p, eContainer) => {
 //   console.log("更新后的顺序表：", L, L.length); // 输出: [10, 20, 40, 50]
 // };
 
-/*** 
-The 'splice()' method is used to add, remove or replace elements in an array, and it directly modifies the original array (that is, it changes the original array).
+    /*** 
+    The 'splice()' method is used to add, remove or replace elements in an array, and it directly modifies the original array (that is, it changes the original array).
 
-array.splice(start, deleteCount, item1, item2, ...)
+    array.splice(start, deleteCount, item1, item2, ...)
 
-1.
-const fruits = ['apple', 'banana', 'orange', 'grape'];
+    1.
+    const fruits = ['apple', 'banana', 'orange', 'grape'];
 
-// 从索引 1 开始，删除 2 个元素
-const removed = fruits.splice(1, 2);
-console.log(fruits);     // ['apple', 'grape']
-console.log(removed);    // ['banana', 'orange']
+    // 从索引 1 开始，删除 2 个元素
+    const removed = fruits.splice(1, 2);
+    console.log(fruits);     // ['apple', 'grape']
+    console.log(removed);    // ['banana', 'orange']
 
-2.
-const colors = ['red', 'blue'];
+    2.
+    const colors = ['red', 'blue'];
 
-// 从索引 1 开始，删除 0 个，插入 'green'
-colors.splice(1, 0, 'green');
-console.log(colors);     // ['red', 'green', 'blue']
+    // 从索引 1 开始，删除 0 个，插入 'green'
+    colors.splice(1, 0, 'green');
+    console.log(colors);     // ['red', 'green', 'blue']
 
-3.
-const pets = ['cat', 'dog', 'fish', 'bird'];
+    3.
+    const pets = ['cat', 'dog', 'fish', 'bird'];
 
-// 从索引 1 开始，删除 2 个，插入 'hamster' 和 'rabbit'
-pets.splice(1, 2, 'hamster', 'rabbit');
-console.log(pets);       // ['cat', 'hamster', 'rabbit', 'bird']
+    // 从索引 1 开始，删除 2 个，插入 'hamster' 和 'rabbit'
+    pets.splice(1, 2, 'hamster', 'rabbit');
+    console.log(pets);       // ['cat', 'hamster', 'rabbit', 'bird']
 
-4.
-const nums = [1, 2, 3, 4, 5];
+    4.
+    const nums = [1, 2, 3, 4, 5];
 
-// 从倒数第2个开始，删除1个
-nums.splice(-2, 1);
-console.log(nums);       // [1, 2, 3, 5]
+    // 从倒数第2个开始，删除1个
+    nums.splice(-2, 1);
+    console.log(nums);       // [1, 2, 3, 5]
 
-***/
+    ***/
 
 /* The merging loop runs at most m + n times — each iteration moves either pa or pb.
    Overall Time Complexity: O(m + n) */
