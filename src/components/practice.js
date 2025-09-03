@@ -130,7 +130,7 @@ export const mergeSortedLists = (A, B) => {
 
     // 构建带头结点的链表
     // const createList = (arr) => {
-    // const head = { next: null };
+        // const head = { next: null };
         // let current = head;
         // for (const val of arr) {
         //     current.next = { value: val, next: null };
