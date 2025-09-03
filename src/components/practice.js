@@ -136,7 +136,7 @@ export const mergeSortedLists = (A, B) => {
         //     current.next = { value: val, next: null };
         //     current = current.next;
         // }
-    // return head;
+        // return head;
     // };
 
 
