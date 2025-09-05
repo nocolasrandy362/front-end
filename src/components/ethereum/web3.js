@@ -164,8 +164,8 @@ yet excitement and confusion are intertwined in everyone's heart.
 
 《Section-by-Section: Guiding and Establishing National Innovation for U.S. Stablecoins Act or the “GENIUS Act”》
 Sec. 3 Issuance and treatment of payment stablecoins  支付稳定币的 发行和处理
-Section 3 prohibits the issuance of payment stablecoins in the United States 
-by any entity other than those approved as permitted stablecoin issuers under the bill upon enactment. 
+Section 3 prohibits the issuance of payment stablecoins in the United States by any entity 
+other than those approved as permitted stablecoin issuers under the bill upon enactment. 
 
 第3条禁止任何未经批准为本法案通过时所允许的稳定币发行机构的实体，在美国发行支付型稳定币。
 （更通顺的翻译：）
