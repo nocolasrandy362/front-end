@@ -1,3 +1,4 @@
+// ---把复杂的问题简单化  清晰的记得每个词组的发音 最小单元是词组 短句 而不是单词---
 // 共识机制 复习01
 /*
 The consensus mechanism refers to a protocol or algorithm used to ensure that all nodes in a blockchain network reach an agreement on the validity of transactions and blocks. 
@@ -38,13 +39,14 @@ Verify and add to the blockchain: Other nodes will verify the validity of the ne
 
 // ERC-20
 /*
-ERC-20 is a technical standard for smart contract tokens on the Ethereum blockchain. It defines a set of rules and functions that a token contract must follow in order to be compatible with the Ethereum network. 
+ERC-20 is a technical standard for smart contract tokens on the Ethereum blockchain. 
+It defines a set of rules and functions that a token contract must follow in order to be compatible with the Ethereum network. 
 The term ERC stands for "Ethereum Request for Comments," and 20 is the proposal number that identifies the standard.
 
 ### Key Points about ERC-20:
 1. Standardization: ERC-20 defines a standard set of rules that make it easy for tokens to interact with various wallets, decentralized exchanges (DEXs), and other decentralized applications (DApps) on the Ethereum network.
 
-2. Interoperability: By following the ERC-20 standard, tokens can be easily integrated into Ethereum-based platforms and used across a wide variety of decentralized services.
+2. Interoperability: By following the ERC-20 standard, tokens can be easily integrated into Ethereum-based platforms「and used across a wide variety of decentralized services」
 
 3. Token Functions: The standard specifies several key functions that a token smart contract must implement to work on Ethereum. 
 -----------------该标准规定了令牌智能合约必须实现的几个关键功能才能在以太坊上工作。
@@ -149,7 +151,7 @@ ERC-20 is a widely adopted, standardized framework for creating tokens on the Et
 
 It ensures interoperability and compatibility across Ethereum's decentralized ecosystem, 
 making it easier for developers and users to interact with various Ethereum-based applications. 
-Despite its success, newer standards (such as ERC-721 for NFTs and ERC-1155 for multi-token support) have emerged to cater to more complex use cases, 
+Despite its success, newer standards have emerged to cater to more complex use cases, 
 but ERC-20 remains the dominant token standard on Ethereum.
 */
 /*
