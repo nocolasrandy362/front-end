@@ -19,6 +19,14 @@ declarations：名词复数，意为“声明”、“言论” --声明
 英文：The politician's controversial speech, which clearly provoked outrage among minority groups, sparked nationwide protests, drawing intense media scrutiny.
 汉语：这位政治家的有争议的演讲 显然引发了少数群体的愤怒，激起了全国范围的抗议活动，并引起了媒体的高度关注。
 
+英文： The new Vue3 feature, while promising better performance, is currently under scrutiny for its potential security vulnerabilities when handling user data.
+汉语： Vue3 的这一新功能虽然有望带来更出色的性能，但目前在处理用户数据时因其可能存在安全漏洞而正受到严格审查。
+主语：The new Vue3 feature
+插入状语（让步）：while promising better performance （= while it is promising better performance）
+谓语：is currently under scrutiny
+原因状语：for its potential security vulnerabilities
+时间/条件状语：when handling user data
+
 speculative： 推测的，猜测的，推断的；投机性的
 英文：The rapid rise in housing prices was largely driven by speculative buying.
 汉语：房价的快速上涨在很大程度上是由投机性购房推动的。
