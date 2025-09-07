@@ -1,12 +1,19 @@
-/*
 [Music] welcome to the ultimate react course in this course you will learn everything
+0:06
 you need to know about react from the basics to more advanced concepts so by the end of the course you'll be able to
+0:12
 confidently build fast and scalable apps with react if you are looking for a comprehensive easy to follow
+0:18
 well-organized and practical course that takes you from Zero to Hero this is the right react course for you you won't
+0:24
 need any prior knowledge of react to get started everything you need to know is right here so you won't need to jump
+0:29
 back and forth between random tutorials now unlike other courses we won't be building a dummy App instead we'll be
+0:37
 building and deploying a beautiful production grade app for discovering video games this app has all the
+0:43
 features and UI patterns you would expect from a modern application we can toggle within the dark and light modes
+0:50
 we can search for games filter them by genre as well as platform now as we
 0:55
 change filters the page title gets updated dynamically we can also sort games and here we see loading skeletons
