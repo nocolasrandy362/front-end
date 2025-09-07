@@ -1,3 +1,4 @@
+/*
 [Music] welcome to the ultimate react course in this course you will learn everything
 0:06
 you need to know about react from the basics to more advanced concepts so by the end of the course you'll be able to
