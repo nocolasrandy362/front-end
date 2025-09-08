@@ -38,11 +38,15 @@ What is React?
 
 Before we begin coding, let's take a few minutes and discuss what React is and how it helps us create better applications. React is a JavaScript library for building dynamic and interactive user interfaces. It was created at Facebook in 2011 and is currently the most widely used JavaScript library for front-end development. So, if you're looking for a job as a front-end developer, you should know how to confidently build applications with React.  
 
-But why was React created? Well, as you probably know, when a web page is loaded in a browser, the browser takes the HTML code and creates a tree-like structure called the Document Object Model, or the DOM for short. This allows us to use JavaScript and change the page content in response to user actions. For example, we can use JavaScript to hide an element when a button is clicked. This is called vanilla JavaScript, meaning plain JavaScript code without any third-party tools.  
+But why was React created? Well, as you probably know, when a web page is loaded in a browser, the browser takes the HTML code and creates a tree-like structure called the Document Object Model, or the DOM for short. This allows us to use JavaScript and change the page content in response to user actions. For example, we can use JavaScript to hide an element when a button is clicked. 
+
+This is called vanilla JavaScript, meaning plain JavaScript code without any third-party tools.  
 
 Now, as our applications grow, working with the DOM can become quite complex and challenging to manage. This is where React comes into play. With React, we no longer need to worry about querying and updating DOM elements. Instead, we build a web page using small, reusable components, and React will take care of efficiently creating and updating DOM elements. So, components help us write reusable, modular, and better-organized code.  
 
-Now, let's look at a real-world example. Imagine you want to build a web page like this. On this page, we have a navigation bar on the top, a side panel on the left, and a grid of video games in the main area. We can build each of these sections as separate components. Now, in this grid, each game is displayed in a card, which is an independent component. With a like button—that's another component itself. We can build all these components individually and then combine them to build this page. Essentially, a React application is a tree of components, with the App being the root, bringing everything together.  
+Now, let's look at a real-world example. Imagine you want to build a web page like this. On this page, we have a navigation bar on the top, a side panel on the left, and a grid of video games in the main area. We can build each of these sections as separate components. Now, in this grid, each game is displayed in a card, which is an independent component. With a like button—that's another component itself. 
+
+We can build all these components individually and then combine them to build this page. Essentially, a React application is a tree of components, with the App being the root, bringing everything together.  
 
 All right, that's enough theory for now. Next, we're going to set up our development environment and get a feel for what it's like to build applications with React.  
 
@@ -56,5 +60,54 @@ With all that, now we are ready to create our first React application.
 
 [Music]
 
+ * 
+ */
+
+/******
+126- 217
+
+**Creating a React App**
+
+There are two ways to create a React app. We can use the official tool provided by the React team. It's called Create React App, or CRA. But we also have another tool called Vite that's getting increasingly popular these days because it's much faster and gives us smaller bundle sizes.
+
+So, here in the terminal window, I'm currently on my desktop. To create a new app using Vite, all you have to do is run `npm create vite@latest`. Or, if you want to use the exact same version as me—which is what I recommend you do, because I want to make sure you have the exact same experience—then you need to specify the version, that is, 4.1.0.
+
+Okay. Now, npm is asking if you want to install this package. Let's proceed.
+
+Next, we need to specify our project name, which is "Vite project" by default, but we can change that to anything, like "react-app". Next, we need to select a framework. So, using Vite, we can create any kind of JavaScript project. We can use vanilla JavaScript, which is JavaScript without any third-party tools. We can also create a Vue project, a React project, and so on. So, using up and down arrows, we can move down this list. Let's select React.
+
+Next, we need to select a language. So, here we have JavaScript and TypeScript. We're going to use TypeScript in this course. Good. So now we have a new project.
+
+Next, we need to go into this folder, install all the third-party dependencies, and run our web server. So, let's `cd` into the react-app folder and type `npm install`, or `npm i`—that is shorter—and with this, we can install all the third-party libraries.
+
+All right. Now we need to open this project in VS Code. To do that, we type `code .`. If this doesn't work on your machine, simply drag and drop that folder into VS Code.
+
+Now, here in VS Code, we can open an embedded terminal by pressing Ctrl and backtick. If this doesn't work on your machine, just go to the terminal window and open a new terminal. You can also see the shortcut right here. So, this is our embedded terminal. It's much easier to use this than switch back and forth between VS Code and a different terminal window.
+
+Now, to run our web server, we type `npm run dev`. Now, this launched a web server at this address: localhost:5173. This might be different on your machine, so don't worry about that. Just open this address in your browser, and this is our first React application.
+
+Next, we're going to create our first React component.
+
+---
+
+**Project Structure**
+
+So, this is our project loaded in VS Code. Now, let me give you a brief overview of the key files and folders in this project.
+
+Here, we have the `node_modules` folder. This is where all the third-party libraries, like React and other tools, are installed. You'll never have to touch this.
+
+Next, we have the `public` folder. This is where the public assets of our website exist, like images, video files, and so on.
+
+Next, we have the `src` folder. This is the source code of our application. In this folder, currently, we have a component called the App component. Don't worry about any of the code here. We're going to rewrite everything from scratch. All I want you to note here is that currently in this application, we have a single component called the App component.
+
+Now, outside of the `src` folder, we have `index.html`, which is a very basic HTML template. In this template, we have a `div` with the ID of `root`—that is the container for our application. Below that, we have a script element referencing `src/main.tsx`. This is the entry point to our application.
+
+Next, we have `package.json`. In this file, you can find information about this project. So, we have the name of the project, its version, a bunch of scripts, and the list of dependencies. So, currently, we're dependent on two libraries: React and React DOM, version 18. We also have a bunch of development dependencies. These are only used for development; they're not going to be deployed with our application in the future.
+
+Next, we have a TypeScript configuration file. Here, we have a bunch of settings for telling the TypeScript compiler how to compile our code to JavaScript. Now, for the most part, you never have to touch this file unless you're an advanced user.
+
+And finally, we also have a configuration file for Vite. Again, for the most part, you don't have to touch this file.
+
+[Music]
  * 
  */
