@@ -1,6 +1,5 @@
 /*
 1-38
----
 
 Welcome to the Ultimate React Course. In this course, you will learn everything you need to know about React, from the basics to more advanced concepts. So, by the end of the course, you'll be able to confidently build fast and scalable apps with React.
 
