@@ -114,5 +114,55 @@ And finally, we also have a configuration file for Vite. Again, for the most par
 
 /***
  * 
+219-368
+
+Now to create a react component we right click on the source folder and add a new file called message.tsx. So the extension of typescript files should be either TS or TSX. Quite often we use Ts for plain typescript files and TSX for react components.
+
+Now there are two ways to create a react component. We can use a JavaScript class or a function. These days function based components have become more popular because they are more concise and easier to write. So that's what we'll use in this course. 
+
+But if you're maintaining an older react project that is built with class components you can look at my previous react course to learn about them. But function based components are the recommended approach for new projects. So here we declare a function called message. That pay attention to how I have named this function. 
+
+This convention is called Pascal casing. With Pascal casing we should capitalize the first letter of every word. In this case p and C. It's really important to follow this convention because this is the convention that both react and other developers expect us to follow. 
+
+So in react application whenever we want to create a function component we should always follow Pascal casing. Now here we should describe what the UI is going to look like where we use this component. So let's say wherever we use this component we want to render an H1 element with a message like hello work. 
+
+So here we return an H1 element with hello world. Now this syntax might make you a little bit confused. You might be thinking that you're writing HTML code in the middle of JavaScript code. But that is not correct. This syntax you see here is called jsx which is short for JavaScript XML. 
+
+So this code under the hood is going to get compiled down to JavaScript. If you head over to babblejs.io repo that is repl you can see how this code gets converted to JavaScript. Let me show you. So on the left side we can write jsx code like H1 hello world and on the right side we can see the equivalent JavaScript code. 
+
+So this piece of code gets eventually converted to react.createelement the type of element is H1 and the message inside the element is hello world. So this is a very basic component. Now to use this first we need to export it as a default object from this module. 
+
+Now let's go to the app component and use this new component. So back to our project here's the app component. Now we're going to delete everything in this file. Now let's create a new component called app. 
+
+Now in this component let's say we want to have a div and inside the div we want to have our message component. 
+
+So first we need to import our message component from period slash message. So period means the current folder. Now we can use this component just like regular HTML elements. So we add the opening tag and close it. It's really important to close it. We should always close our react components or we'll get a compilation error. 
+
+Now here we can also use the self-closing syntax that is more concise. Now just like the message component we should export the app component so it can be used somewhere else. Now here in the terminal you can see our web server is still running and here we have HMR which is short for hot module replacement. 
+
+So read under the hood monitors our files for changes. Whenever we make any changes it will automatically refresh our page in the browser. So now you can see our message component rendered on the screen. Now this is a very simple example. In a real world application a component can have Behavior. So here we can have a button. 
+
+When the button gets clicked perhaps we can change the message. We can do all sorts of things. So with jsx we can easily describe the user interface of our application with HTML and JavaScript. Now the great thing about jsx is that it allows us to easily create Dynamic content. For example here we can declare a constant Cod name I set it to my name Marsh. 
+
+Now we can replace this word with my name dynamically. So here we add braces and inside the braces we can write any JavaScript expression. An expression is a piece of code that produces a value. So here we can reference the name constant. We can also call a function like get name. Basically any piece of code that returns a value. So here we can add my name dynamically. 
+
+We can also write if statement. So we can say if name is true theme return this markup otherwise return a different markup like Hello World. Now back to the browser you can see my name is rendered on the screen. However if I change the name to an empty string we see Hello World. So this is the beauty of jsx. 
+
+Using this syntax we can easily describe the user interface of our applications. [Music]  
+
+How React Works.  
+
+So currently we have a component tree with the app being the root or top level component and the message being a child. When our application starts react takes this component tree and builds a JavaScript data structure called the virtual Dom. This virtual Dom is different from the actual Dom in the browser. 
+
+It's a lightweight in-memory representation of our component tree where each node represents a component and its properties. When the state or the data of a component changes react updates the corresponding node in the virtual Dom to reflect the new state. Then it compares the current version of virtual Dom with the previous version to identify the nodes that should be updated. 
+
+It will then update those nodes in the actual Dom. Now technically updating the Dom is not done by react itself. It's done by companion Library called react Dom. So earlier we talked about package.json. In this file we can see the dependencies of our application. So currently our application is dependent on two libraries react and react on. Let me show you how these work together. 
+
+So in index.html I told you that we have a div with the idea of root and this is the container of our application. Below that we have a script element referencing main.tsx. Now if you look at this file you can see that here we're using react Dom to render this component tree inside an element with the ID of root. So this is our component tree. 
+
+Here is our app component that is wrapped by another component called strict mode. This is one of the built-in components in react. It doesn't have a visual representation. Its purpose is to identify potential problems. So we're taking this component tree and rendering or displaying it inside an element with the idea of root. And to do that we're using the react on library. 
+
+But we can also render this component Tree in a mobile app using a different Library called react native. So react itself is not tied to a particular platform like web or mobile. It's platform agnostic and we can use it to build apps for web mobile and desktop devices.  
+React Ecosystem
  * 
  * **/
