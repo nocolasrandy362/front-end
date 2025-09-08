@@ -21,4 +21,4 @@ I'm Marsha Madani, a software engineer with over 20 years of experience. I've ta
 
 So, if you're ready to master React and build front-end apps with confidence, let's jump in and get started. 
 
-[Music]
+[Music]*/
