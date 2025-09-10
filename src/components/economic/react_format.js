@@ -22,9 +22,6 @@ I'm Marsha Madani, a software engineer with over 20 years of experience. I've ta
 
 So, if you're ready to master React and build front-end apps with confidence, let's jump in and get started. 
 
-[Music]*/
-
-/*****
  ---------------------------
  39-125
 
@@ -214,7 +211,46 @@ Okay, here we have an error saying there are multiple formatters for TypeScript 
 
 Just note that Prettier automatically wrapped our JSX markup in parentheses — this is necessary to break the markup into multiple lines. So if you're not using VS Code with Prettier, be sure to add the left parenthesis in front of the return keyword so you can spread your JSX into multiple lines. So now back to the browser — here's our ListGroup component, but this is pretty boring — this doesn't have any functionality, and it doesn't allow us to render or display these items dynamically. So we're going to solve these issues one by one over the next few lessons.
 
+528-641
 
+Now what if we want to add a heading here? Well, if we add another element here like an H1, we get a bunch of errors because in React a component cannot return more than one element. So earlier I told you that this H1 expression that we have here eventually gets compiled to JavaScript. 
 
-528-
+So this line gets translated to something like `React.createElement` with H1 being the type of the element.
+
+The same thing will happen for the second element. So in this function, we are returning multiple elements, and this is not allowed in React. Now, to solve this problem we have a couple of different ways. One simple way is to wrap this entire expression inside a div or another element.
+
+So let me show you another shortcut. We select all this code, then we bring up the command palette. So we go to the View menu and bring up the command palette, or better, we use the shortcut. And here we search for “wrap with abbreviation.” Now we press enter, and here we specify the type of element that we want to use to wrap this entire code. So div, enter, done.
+
+Okay, so that's one way, but we're adding one extra element in the DOM purely for making React happy. This is unnecessary. A better way is to use a fragment. So on the top, we import Fragment from React. Make sure to put it in braces. Now we replace the div with a Fragment.
+
+So just like before, I've selected the div element. Now we can press Command and D to select the other div, and now with multiple cursors we can edit both of them in one go. Okay, now with this change, when this component is rendered on the screen, we're not going to have an additional element like a div in the DOM.
+
+Okay, now there is even a better way to achieve the same result. We have a shorter syntax. We don't have to import the Fragment component from React. So let's delete this line, and we select the Fragment tags, both of them, and remove them. So if you add empty angle brackets, we're telling React to use a Fragment to wrap all these children.
+
+Now back to the browser. So here's our heading and our items. Beautiful.
+
+---
+
+Now this list is kind of useless because we have hard-coded these items in our markup. What if you want to render a list of items dynamically? Well, let's declare a constant called `items` and set it to an array of strings. Here we can use the name of cities like New York, San Francisco, Tokyo, London, and Paris.
+
+Now in JSX we don't have a for loop, so we cannot write code like “for item in items render whatever.” It doesn't work that way. So we have to use a different technique. In JavaScript, as you probably know, arrays have a method called `map` for mapping or converting each item to an item of a different type.
+
+So if you type `items.map`, here we can pass an arrow function. We can say, take each item and convert it to an item of a different type. So here we want to convert each item to an `li` element. So here we type `li`, and inside the tags we want to render or display the item itself.
+
+Earlier I told you that in JSX we use curly braces to render data dynamically. So here we render the item itself. Okay, now we're going to delete all these list items, and instead we're going to bring down this piece of code.
+
+However, we get a compilation error because this expression is not allowed in the middle of a JSX markup. In JSX we can only use HTML elements or other React components. So to render data dynamically, we need to wrap this expression in braces.
+
+Okay, now save the changes. Our code got reformatted, so Prettier plugin broke down our code into multiple lines and added parentheses to wrap them. Now back to the browser, here's our list of cities. Beautiful.
+
+While reviewing this video, I just realized that I made a mistake earlier and forgot to apply a CSS class to our list items. That's why we have lost styling here. But don't worry, I'll fix that in a later video.
+
+However, if we right click anywhere on this page and go to Inspect, this is Chrome Developer Tools, you should probably be familiar with it. Here on the console tab we have a warning saying each child in a list should have a unique key prop.
+
+What does this mean? Well, back to our code, this is where we are mapping each item to a list item. Here the warning is saying that each list item should have a key prop or key property that uniquely identifies that item. React needs this to keep track of our items, so later when we add or remove items dynamically React knows what part of the page should be updated.
+
+So when rendering a list of items using the `map` method, we should give each item a unique key. Now in this case, each item has a unique string, so we can use the item itself as a unique key. But in a real-world application where we retrieve items from an API, quite often each item has a property like ID. We don't have that in this case, so we don't have to worry about it.
+
+Now back to the browser, let's refresh. The warning is gone, and here's our list. Beautiful.
+
  * **/
