@@ -214,4 +214,7 @@ Okay, here we have an error saying there are multiple formatters for TypeScript 
 
 Just note that Prettier automatically wrapped our JSX markup in parentheses — this is necessary to break the markup into multiple lines. So if you're not using VS Code with Prettier, be sure to add the left parenthesis in front of the return keyword so you can spread your JSX into multiple lines. So now back to the browser — here's our ListGroup component, but this is pretty boring — this doesn't have any functionality, and it doesn't allow us to render or display these items dynamically. So we're going to solve these issues one by one over the next few lessons.
 
+
+
+528-
  * **/
