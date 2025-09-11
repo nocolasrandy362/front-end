@@ -255,9 +255,11 @@ Now back to the browser, let's refresh. The warning is gone, and here's our list
 
  645 - 747
  
-Sometimes we want to render different content based on certain conditions. For example, here we can add an if statement and say, if items' length equals zero, perhaps we want to show the user a different message. So here we can return a completely different markup. For example, we can add a paragraph, and here we say "no item found." Now, to make sure this works, I'm going to change the constant to a variable so we can reassign this on the next line.
+Sometimes we want to render different content based on certain conditions. For example, here we can add an if statement and say, if items' length equals zero, perhaps we want to show the user a different message. 
 
-Okay, now back in the browser—so here we have "no item found." Beautiful, but our heading is gone. So we can come back here and add our heading as well: list. And now we need to wrap this entire expression inside a fragment. So let's add a fragment. Okay, now if I save the changes, Predator reformats our code, and here once again we have parentheses for spreading this code over multiple lines. With this, our heading is back.
+So here we can return a completely different markup. For example, we can add a paragraph, and here we say "no item found." Now, to make sure this works, I'm going to change the constant to a variable so we can reassign this on the next line.
+
+Okay, now back in the browser — so here we have "no item found." Beautiful, but our heading is gone. So we can come back here and add our heading as well: list. And now we need to wrap this entire expression inside a fragment. So let's add a fragment. Okay, now if I save the changes, Predator reformats our code, and here once again we have parentheses for spreading this code over multiple lines. With this, our heading is back.
 
 But I don't like this implementation because we have a bit of duplication, and generally speaking, duplication in code is not considered a good practice. So let me show you a different way to achieve the same result. We're going to get rid of the if statement. Instead, we're going to render things conditionally inside our JSX expression.
  
@@ -275,8 +277,12 @@ Now, let me revert this code back to the previous state. I'm going to move this 
 
 We start with our condition: items' length equals zero. Now, instead of using the ternary operator, instead of using a question mark, we do a logical AND between this condition and the value that we want to return if this condition is true—that is, the paragraph element. Okay, with this implementation, we don't have the null keyword, and our code is a little bit more concise.
 
-But how does this work? Well, let's go back to the browser and open up Chrome Developer Tools. Here in the Console tab, this is going to be our JavaScript playground. If you have a Boolean value like true and perform a logical AND with another value, like one—see what happened? The result of this entire expression is equal to the second value. What if we type true AND Mosh? The result of the expression is Mosh. Now, what if you have false AND Mosh? The result is false.
+But how does this work? Well, let's go back to the browser and open up Chrome Developer Tools. Here in the Console tab, this is going to be our JavaScript playground. If you have a Boolean value like true and perform a logical AND with another value, like one—see what happened? 
+
+The result of this entire expression is equal to the second value. What if we type true AND Mosh? The result of the expression is Mosh. Now, what if you have false AND Mosh? The result is false.
  
-So what does this mean? Well, that means if our condition is true, the result of this entire expression will be our paragraph element. But if the condition is false, the result of the entire expression will be false, and nothing will be rendered on the screen. So this is a very common technique React developers use to render content dynamically. Okay, with this, we can remove the slide, and this is our final implementation. Foreign. [Music]
+So what does this mean? Well, that means if our condition is true, the result of this entire expression will be our paragraph element. But if the condition is false, the result of the entire expression will be false, and nothing will be rendered on the screen. 
+
+So this is a very common technique React developers use to render content dynamically. Okay, with this, we can remove the slide, and this is our final implementation. Foreign. [Music]
 
 * **/
