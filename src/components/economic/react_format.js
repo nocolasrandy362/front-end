@@ -285,4 +285,54 @@ So what does this mean? Well, that means if our condition is true, the result of
 
 So this is a very common technique React developers use to render content dynamically. Okay, with this, we can remove the slide, and this is our final implementation. Foreign. [Music]
 
+748 - 865
+
+Now, let's see how we can handle click events in a component. First, I'm going to remove this line so we bring back our items. Good. Now, I just realized that earlier I made a mistake and forgot to apply one of the Bootstrap classes to these items. So, back to our code: this is where we're rendering a list item; we should give this a class of list-group-item.
+
+Okay, that's better. Now, we want to be able to click on each item and see it on the console. In React, each element has a property, or a prop, called onClick. So, here, I'm going to add that onClick to braces. Now, inside the braces, we can write an arrow function — a function with no parameters — and here, we can just say `console.log("clicked")`. As simple as that.
+
+Now, I'm going to save the changes, so the code is reformatted — so now each property, or each prop, is on a separate line. Okay. Now, back to the browser: we had an internal server error from this web server. Don't worry about it; just refresh — error is gone.
+
+Now, if we click on each item, we see this message. Beautiful. But what if you want to see the actual item that was clicked? Well, look: this is where we are mapping each item to a list item. So, when creating this list item, we have access to each item, because we are using that item as the key of each list item, right?
+
+So, instead of logging "clicked", we can simply log `item`. Now, if we click on each item, we see it on the console. Beautiful.
+
+And by the way, when mapping items, we can optionally add a second parameter as an index, and with this, we can see the index of the item that was clicked. So, let me show you. I'm going to clear the console. Now, if we click on each item, we can also see its index in the array. Lovely.
+
+Now, this arrow function can optionally have a parameter that represents the browser event. We can call that `e` or `event`, whatever we prefer. Now, let's log this on the console and see what we get.
+
+So, clear, click. Look: the type of this object is SyntheticBaseEvent. I know it's a fancy term. This is one of the built-in classes in React, because different browsers have different implementations of event objects. 
+
+So, to make this cross-browser, the React team has created a class called SyntheticBaseEvent, that is a wrapper around the native browser event object.
+
+Now, if you look at the properties of this object, you see properties that you're probably familiar with. For example, we have `clientX` and `clientY`, which represent the position where we clicked. We also have `type`, which represents the type of event. We have `target`, which is the element where I clicked — that was a list item with this class.
+
+Now, our event handling logic here is very simple — it's just a one-liner — so writing a function here is totally fine. But if our logic gets more complex, we don't want to write that logic here in the middle of a JSX markup. Instead, we should move that logic into a separate function.
+
+So, in this component, we declare a function. By convention, we start with the word "handle", and then we specify the type of event — in this case, "click".
+
+Now, we set this to... Let's grab this piece of code and paste it here.
+
+Now, we have a warning from the TypeScript compiler saying parameter 'event' implicitly has an 'any' type. So, the reason I know this is a TypeScript issue is that here we have "TS" — that is short for TypeScript.
+
+But why are we getting this warning? Well, the reason we're getting this error is that the TypeScript compiler doesn't know: the type of this parameter — is it an event? Is it a number? Is it a string? Is it an object? What is it?
+
+So, if we use the dot operator, we cannot see any properties of this event object. This is where we need to specify the type of our parameter, so we get auto-completion and type safety.
+
+So, let's hover our mouse over this event parameter. Look: the type of this parameter is `React.MouseEvent`. So, when we pass an inline function here, the TypeScript compiler knows the type of our parameter — that is why we didn't get a warning earlier.
+
+But in this case, we're declaring a brand new function. The TypeScript compiler doesn't know where we're going to use this, so it doesn't know the type of this parameter.
+
+So, we should go on the top, add `import { MouseEvent } from 'react'`, and then after the parameter, we type a colon followed by its type. This is called type annotation in TypeScript.
+
+With type annotation, we can specify the type of variables, parameters, and so on. Now, with this annotation, if we use the dot operator, we can see all the properties of this `MouseEvent` object.
+
+This is one of the beauties of TypeScript: we get auto-completion, we get type safety, and it's easier to refactor or restructure our code. You'll see more examples as we go through the course.
+
+So, let's finish this example. Now, we have a function here. This function is called an event handler, because its job is handling an event — in this case, the click event.
+
+Now, over here, we're going to remove this inline function and simply reference our `handleClick` function. Note that I'm not calling this function — we don't want to call it — we just want to pass a reference. So, you're telling React that whenever the user clicks on this event, this function should be called.
+
+Calling this function will be done later at runtime. Now, let's make sure everything is working. So, let's click on one of these items. Beautiful.
+
 * **/
