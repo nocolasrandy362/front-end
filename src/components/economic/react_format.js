@@ -335,4 +335,120 @@ Now, over here, we're going to remove this inline function and simply reference 
 
 Calling this function will be done later at runtime. Now, let's make sure everything is working. So, let's click on one of these items. Beautiful.
 
+865-1131
+
+All right. Now, the next step: when we click on an item, we want to highlight it. To do that, we have a CSS class in Bootstrap called `active`.
+
+So, back to our code: this is where we are rendering a list item. I'm going to give this a second class called `active`. Now, look — all of them are highlighted or activated. This is not what we want; we want to highlight one item at a time.
+
+To do that, we need a variable to keep track of the index of the selected item. So, back to our component: let's declare a variable called `selectedIndex`. We can initialize this to negative one — that means no item is selected. If we set this to zero, that means the first item should be selected.
+
+Now, down here, we can render this `active` class dynamically. So, we're going to use the same technique you learned in the conditional rendering lesson. I'm going to remove the quotations here; we add braces so we render content dynamically. Here, we can check the `selectedIndex`: if it equals the index of the current item, that means that item should be active. So, we're going to give it two classes: `list-group-item` and `active`. Otherwise, we should only give it the `list-group-item` class.
+
+This is a very simple way to add classes dynamically. There are other more advanced techniques — let's not worry about them at this stage. Let's just see if this works or not. So, back to the browser: now the first item is selected. Beautiful.
+
+Now, when we click on an item, we should change the `selectedIndex`. So, this is very good handling the click event. Now, in this case, we need a simple arrow function to update the `selectedIndex`. So, I'm going to get rid of this `handleClick` function, so we delete it from here as well as here. We should also delete the `MouseEvent` import on the top.
+
+Okay, so always pay attention to cleaning up your code. So, here we write a simple arrow function, and here we set `selectedIndex` to the index of the current item. Okay, now back to the browser: let's click on an item. Nothing is happening. Why is that?
+
+Well, this variable we have declared here is local to this function component, so React is not aware of it. It's like a little secret inside this component. To solve this problem, we should tell React that this component is going to have data, or state, that might change over time. To do that, we have to use one of the built-in functions in React called `useState`. So, when we type this here and press Enter, it gets imported on the top.
+
+Okay, now this function is called a hook. A hook is a function that allows us to tap into built-in features in React. So, this is called the state hook. We have other hooks that you will learn about as we go through this course. Using the state hook, we can tell React that this component can have data, or state, that will change over time.
+
+So, instead of declaring a variable this way, we're going to call this function that we're going to initialize our variable. We can give it the initial value of negative one. Now, this returns an array. In this array, we're going to have two elements: the first element is going to be a variable — like our `selectedIndex` variable — and the second element is going to be an updater function. Using that updater function, we can update this variable, and at that point React will be notified so it knows that the state of our component has changed, and then it will re-render our component, which causes the DOM to be updated under the hood.
+
+So, as I told you earlier in the course, with React we almost never have to touch the DOM directly. We think in terms of components that have state. When the state of a component changes, React will update the DOM to match the new component state.
+
+Okay, now let's see how we can use this. So, instead of working with two individual elements here, it's easier to destructure this array into two elements. So, the first element is going to be `selectedIndex`, and the second element is going to be a function which we call `setSelectedIndex`. This is a convention we follow in React applications.
+
+So, here we have a state variable called `selectedIndex`, and here we have a function called `setSelectedIndex`. Now, as another example, we can use the state hook to declare another variable called `name`. So, we call `useState`; we can initialize the name to an empty string. This returns an array which we can destructure into two elements: `name` and `setName`.
+
+That's the idea. Now, in this case we don't need a name variable, so let's delete this line and the comment and the slide. So, here we have a state variable called `selectedIndex`. Now, down here, to update this variable, we're going to call `setSelectedIndex` and give it the new index. With this, when we click on an item, it gets selected. Beautiful.
+
+So, this is how we tell React that our component can have state that will change over time. Now, one thing you need to know about component state is that each component is going to have its own state. So, if we go back to our app component and add another instance of our list group here, each list group is going to have its own state.
+
+So, in our first list group, Paris is selected, but in our second list group, nothing is selected because this component has its own state. So, they will be independent of each other. Okay, now we don't need two list groups here, so I'm going to remove the second one.
+
+**Passing Data Via Props**
+
+We're showing a list of cities here, but what if we want to show a list of names or a list of colors? We don't want to recreate a separate component for each type of list, right? So, how can we make this component reusable? This is where we use props, or properties. Props are the inputs to our components.
+
+So, back to our code: instead of defining these items here, we should be able to pass them as an input to this component, just like how we can call a function and give it an argument. Now, the same principle applies to this heading. Instead of hard coding this label here, it would be nicer if you could pass different labels, like cities, names, colors, and so on.
+
+So, how can we do that? Well, first we need to decide the shape of the input to this component. So, we should be able to pass an object with two properties: `items`, which is going to be an array, and `heading`, which is going to be a string. To do that, we use one of the TypeScript features called an interface. Using an interface, we can define the shape or the interface of an object.
+
+So, you start with the `interface` keyword, give this a name. By convention, you use `Props`, but some people prefer to prefix it with the name of the component, so `ListGroupProps`. Either way, it works. I prefer a shorter name. That in braces would define various properties and their types. So, we want to have `items`, which is going to be an array of strings — so `string[]` — and `heading`, which is going to be a string.
+
+So once again, we're using type annotation to specify the type of various properties. Okay, now we don't need this comment anymore. Next, we give this function a parameter called `props` of type `Props`.
+
+Now, if we go back to our app component, we have two compilation errors saying type is missing the following properties from type `Props`: `items` and `heading`. So, the TypeScript compiler is saying that this component expects two properties, which are `items` and `heading`; we have not specified them. This is yet another benefit of using TypeScript: the TypeScript compiler is reminding us that we have forgotten to pass these props, so it's helping us to catch a bunch of potential errors at compile time before running our application.
+
+So, back to our list group: I'm going to grab the list of items and move it to the app component. Now we can pass this just like how we set the attributes of an HTML element. So, we set `items` to — we add braces so we can reference this variable. Now, similarly, we should also set the `heading` to “Cities”. In this case, I'm using quotation marks, but we could also wrap this in braces, but this is unnecessary because we're passing a static value. So, let's rewrite it — that's better.
+
+Now, the compilation error is gone. So, back to our list group component: now there are a couple of issues here. We don't have the `items` variable anymore, so we have to prefix it with `props.`. Okay, but we have to do the same thing here. This looks a little bit repetitive and ugly. A better solution is to destructure this parameter right here. So, we remove the name and add braces and pick the two properties: `items` and `heading`. Now we have access to these properties anywhere in this function, so we can remove `props.` and our code is cleaner.
+
+Now, the final part is to replace the list with the heading dynamically. Okay, back to the browser: our app is still working. So, using props, we can pass data to our components.
+
+**Passing Functions Via Props**
+
+Our list group component is in fairly good shape: when we click an item, it gets selected. But in a real-world application, quite often something should happen after an item is selected. Perhaps we want to filter a list of objects, or maybe we want to redirect the user to a different page. So, something should happen after an item is selected.
+
+Now, what happens is different from one application to another. There is no one-size-fits-all, so we don't want to implement that piece of logic inside our list group component, because then it's not going to be a reusable component anymore. So, we need a mechanism to notify the consumer or the parent of this component that an item is selected.
+
+In this case, the consumer or the parent of this component is our app component — this is where we are using the list group. So, when an item is selected, we should notify the app component that an item is selected. But how can we implement this? Well, that's very easy.
+
+So, look at our `props` object: currently we have two properties, and we are using these to pass data to our list group component. Now, we can add a third property, which is going to be a function. Now, down here, when we select an item, we're going to call that function. With this, our app component will be notified. Let me show you how this works — it's really simple.
+
+So, first, let's define the signature of that function. Let's imagine that we want a function that takes a parameter called `item` of type `string` — that is, the selected item — and returns `void`, so it doesn't return a value. So, here we have a property. By convention, we start with the word `on`, and then we specify the type of event — in this case, `SelectItem`. This is just like the `onClick` prop that you saw earlier, but here we have `onSelectItem`.
+
+So, we have a property called `onSelectItem`. The type of this property is a function that has a parameter of type `string` and returns `void`. Okay. With that, now we have a compilation error in our app component. How can I tell? Look — it turned red. Also, we can go to the top, under View, open up the Problems panel. So, the TypeScript compiler is telling us that in the app component we have forgotten to pass this prop.
+
+So once again, the TypeScript compiler is helping us catch a lot of potential problems early on. So, let's go back to our app component. Now, here we set `onSelectItem`. We can write an inline function here, just like how we handled the click event earlier, or we can write a separate event handler.
+
+If you want to write a separate event handler, again, just like before, by convention we start with the word `handle`, and then we specify the type of event: `SelectItem`. Now, we set this to a function with a signature that we just defined: so, `item: string` → nothing. Now, here we can just do a `console.log` and print the item on the console.
+
+Now, we can pass that down here: `handleSelectItem`. Now, the last step: back to our list group. Over here, when destructuring the props, we should pick the `onSelectItem` property. And then, when selecting an item, we should call this function. So, we call this and pass the selected item, which is this `item` variable here.
+
+Now, back to the browser: when we select an item, the app component is notified, and it's now printing the name of the selected city on the console.
+
+
+
+
+1134 - 1257
+Here’s the text converted into an English report with timestamps removed and proper paragraph breaks/punctuation added. The original wording is kept exactly as it is:
+
+Now let's talk about the differences and similarities between props and state. As you have seen, props or properties are the inputs or arguments passed to a component. State, on the other hand, is the internal data managed by a component that can change over time. So, props are like functional arguments, and state is like local variables inside a function.
+
+Now, one thing you need to know about props is that we should treat them as immutable. What does this mean in English? To “mute” something means to change it, so mutable means changeable, and immutable means unchangeable. So when we say something is immutable, it means it's read-only. In our list group component, here are our props. 
+
+We should not change any of them here. We should not set the heading to a new value. If we do so, nothing is going to happen. Nobody is going to yell at us, but this is an anti-pattern in React. You will understand the philosophy behind this as we go through the course. This is based on functional programming principles. So we should treat props as immutable or unchangeable.
+State, on the other hand, is mutable, and that's the whole purpose of using state variables. We want to tell React that this component has data that can change over time. So these were the differences between state and props. But one thing they both have in common is that anytime they change, React will re-render our component and update the DOM accordingly.
+Passing Children
+
+Sometimes we want to pass children to a component, just like how we are passing a list group to this div element here. So, in this lesson, I'm going to show you how to create a component that can accept children.
+
+Back to our components folder: let's add a new file called alert.tsx. Now let me show you a shortcut. Instead of defining a function here and then exporting it, we can use a shortcut. So, here in the extensions panel, if you search for ES7 Plus, you will find this extension. It's called ES7 Plus React, Redux, and React Native. It's a very popular extension — look at how many times it's been downloaded.
+
+So once you install this, you can type rafce. Now it's not coming up. I don't know why, so let's close this file and open it one more time. Now let's try again — good. So this is short for “React Arrow Function Component Export.” If you press Enter, we get this code snippet — lovely. Now here we have multi-cursor editing, so we can change the name of the component if you made a mistake, but in this case, no. So let's go back to Alert, and then we press Escape to exit multi-cursor editing. Good. Now we don't need to import React on the top, so here's our Alert component.
+
+Now let's add this to our app component and test our application up to this point. So we go to the app component. We're done with our list group for now, so let's delete all the code here. Now inside this div, we want to add an Alert. So let's add Alert. Good. Now back to the browser: so here's our Alert component — lovely.
+
+Now, to display an alert, we're going to borrow some code from Bootstrap. So head over to the Bootstrap website, go to the docs, and here on the left side under Components, you should find Alerts. So let's find out the markup we need to render an alert like this. That is very straightforward: we need a div with two classes. The base class is alert that all of these have. The second class is a class that determines the color. So if you use alert-primary, we get this blue alert by default.
+
+Back to our Alert component: let's give this div a couple of classes — alert and alert-primary. All right, this is what we get — lovely. Now we need to make this dynamic, so we want to pass the text as a prop. To do that, first we need to use an interface to define the shape of props. So, in Props here, we need a property called text of type string. Then we add a parameter here of type props. In fact, it's better to destructure this and grab the text property and render it right here.
+
+Okay, now back to our app component. Here we should set the text to something like “Hello World.” Before going further, let's test our implementation. Okay, it's working — lovely.
+
+Now, while this works, this way of passing text to this component is kind of ugly. What if the text is a bit too long? What if you want to pass HTML content? Passing HTML content as a prop like this is kind of ugly. Wouldn't it be nicer if you could pass text as a child to this component? Let me show you how. We want to be able to use this component like this — this is better.
+
+To do that, we go back to our component. Now there is a special prop that all components support, and it's called children. So if you simply rename text to children, now we can pass our text as a child to this component. But we have a couple of errors because we need to rename these two references to text. So I'm going to rename them both in one go — good. There is our component, and our application is still working — lovely.
+
+Now, what if you want to pass HTML content? Here we get a compilation error because we told the TypeScript compiler that the children prop is a string, but in this case, we are not passing a string. We are passing a more complex structure. To solve this problem, we need to change the type of children from string to ReactNode. Now here, in the auto-completion box, we have two ReactNodes. The first one is an abbreviation, so if you press Enter here, we get this markup — this is not what we want. We want the second item — this is the ReactNode class defined in the React module. So let's import it on the top like this, and with that, we can pass HTML content to our Alert component.
+
+So, to recap: using the children prop, we can pass children to a component.
+Inspecting Components with React Dev Tools
+1258 - 1540
+
+
+
 * **/
