@@ -52,6 +52,5 @@ function ReverseList(head) {
     return prev;
 }
 
-module.exports = {
-    ReverseList: ReverseList,
-};
+// BM2 链表内指定区间反转
+
