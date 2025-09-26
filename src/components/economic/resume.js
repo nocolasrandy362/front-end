@@ -1,13 +1,10 @@
 /*****
- * 
- 
+ *  
 1.
 Achieve real-time streaming response display, optimize the loading experience of long texts, and enhance the smoothness of user interaction.
 Design and implement components that support the upload of multiple formats of files, combining chunked upload and progress monitoring mechanisms.
 Load and display historical information, ensuring the stability of large file transmission and the user experience.
-
 详情：
-
 
 2. Full-process development of the ordering function module:
 Includes specification selection, dynamic price calculation, ordering confirmation page and information display functions.
