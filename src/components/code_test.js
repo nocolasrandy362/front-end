@@ -25,17 +25,32 @@
 // BM6 比较版本号
 
 
-var compareVersion = function(version1, version2) {
-  let v1 = version1.split('.');
-  let v2 = version2.split('.');
-  let n = Math.max(v1.length, v2.length);
+// BM1 链表反转
+/**
+ * 反转单链表
+ *
+ * @param head ListNode类 链表的头结点
+ * @return ListNode类 反转后链表的新头结点
+ */
+function ReverseList(head) {
+    // 如果链表为空或只有一个节点，直接返回
+    if (!head || !head.next) {
+        return head;
+    }
 
-  for (let i = 0; i < n; i++) {
-    let num1 = i < v1.length ? parseInt(v1[i], 10) : 0;
-    let num2 = i < v2.length ? parseInt(v2[i], 10) : 0;
+    let prev = null; // 前一个节点
+    let current = head; // 当前节点
 
-    if (num1 > num2) return 1;
-    if (num1 < num2) return -1;
-  }
-  return 0;
-};
+    while (current) {
+        const next = current.next; // 保存下一个节点
+        current.next = prev; // 反转当前节点的指针
+        prev = current; // 移动 prev 到当前节点
+        current = next; // 移动 current 到下一个节点
+    }
+
+    // 循环结束后，prev 指向原链表的最后一个节点，即新链表的头
+    return prev;
+}
+
+// BM2 链表内指定区间反转
+
