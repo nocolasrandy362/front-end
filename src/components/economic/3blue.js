@@ -1,7 +1,7 @@
 /****
- * 
- * 
- * * 3blue1brown's Bitcoin series
+ * 《But how does bitcoin actually work?》
+
+ *
  * 
 Introduction
 What does it mean to have a Bitcoin?
