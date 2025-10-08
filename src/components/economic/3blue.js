@@ -54,6 +54,12 @@ This ledger is going to be something public and accessible to everyone,
 like a website where anyone can go and add new lines.
 And let's say at the end of every month you all get together,
 look at the list of transactions, and settle up.
+
+
+/*********************** */
+/****** 
+
+
 If you spent more than you received, you put that money in the pot,
 and if you received more than you spent, you take that money out.
 So the protocol for being part of this very simple system might look like this.
@@ -338,6 +344,11 @@ But unless she has close to 50% of the computing resources among all of the mine
 the probability becomes overwhelming that the blockchain that all the other miners
 are working on grows faster than the single fraudulent blockchain Alice is feeding to
 Bob.
+
+/********** */
+/***** 
+
+
 So after enough time, Bob will just reject what he's hearing from
 Alice in favor of the longer chain that everyone else is working on.
 Notice, that means you shouldn't necessarily trust a new block you hear immediately.

@@ -369,7 +369,7 @@ So, this is how we tell React that our component can have state that will change
 
 So, in our first list group, Paris is selected, but in our second list group, nothing is selected because this component has its own state. So, they will be independent of each other. Okay, now we don't need two list groups here, so I'm going to remove the second one.
 
-**Passing Data Via Props**
+**Passing Data Via Props**                [   复习   ]
 
 We're showing a list of cities here, but what if we want to show a list of names or a list of colors? We don't want to recreate a separate component for each type of list, right? So, how can we make this component reusable? This is where we use props, or properties. Props are the inputs to our components.
 
