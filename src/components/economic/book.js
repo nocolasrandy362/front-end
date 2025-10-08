@@ -74,9 +74,6 @@ Both of these statements do the same thing: they store a function in a variable 
 Additionally, the const keyword was used to declare the second function, which will prevent it from being overwritten.
 We can also add functions to arrays in JavaScript:
 
-const messages = [
- "They can be inserted into arrays",
- message => console.log(message),
 
 
  **       **       **         **          **        **
