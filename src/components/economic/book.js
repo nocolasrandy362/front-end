@@ -33,24 +33,30 @@ These functions can even be returned from functions.
 12. 在 1950 年代末期，John McCarthy 将从 λ-演算中得出的概念 应用于一种名为 Lisp 的新编程语言。
 Lisp 实现了高阶函数和作为一等成员或一等公民的函数的概念。
 14.当一个函数可以被声明为变量并作为参数传递给函数时，它被认为是一个一等成员。
-
-
-这些函数甚至可以从函数中返回。
-
+15.这些函数甚至可以从函数中返回。
 
 
 
 
-In this chapter, we are going to go over some of the key concepts of functional programming, and we’ll cover how to implement functional techniques with JavaScript.
-What It Means to Be Functional JavaScript supports functional programming because JavaScript functions are first class citizens. 
-This means that functions can do the same things that variables can do.
-ES6 adds language improvements that can beef up your functional programming techniques, including arrow functions, promises, and the spread operator (see Chapter 2).
-In JavaScript, functions can represent data in your application. You may have noticed that you can declare functions with the var keyword the same way you can declare strings, numbers, or any other variables:
+1. In this chapter, we are going to go over some of the key concepts of functional programming, and we’ll cover how to implement functional techniques with JavaScript.
+2. What It Means to Be Functional。 JavaScript supports functional programming because JavaScript functions are first class citizens. 
+3. This means that functions can do the same things that variables can do.
+4. ES6 adds language improvements that can beef up your functional programming techniques, including arrow functions, promises, and the spread operator (see Chapter 2).
+5. In JavaScript, functions can represent data in your application. You may have noticed that you can declare functions with the var keyword the same way you can declare strings, numbers, or any other variables:
+
+1.在本章中，我们将回顾函数式编程的一些关键概念，并且我们将涵盖如何用 JavaScript 实现函数式技术。
+2.什么是函数式的含义。JavaScript 支持函数式编程，因为 JavaScript 函数是一等公民。
+3.这意味着函数可以做变量能做的同样的事情。
+4.ES6 添加了可以增强（enhance）你的函数式编程技术的语言改进，包括箭头函数、Promise 和扩展运算符（参见第 2 章）。
+5.在 JavaScript 中，函数可以在你的应用程序中表示数据。你可能已经注意到，你可以使用 var 关键字来声明函数，就像你可以声明字符串、数字或任何其他变量一样
+
+
 var log = function(message) {
  console.log(message)
 };
 log("In JavaScript functions are variables")
 // In JavaScript, functions are variables
+
 
 With ES6, we can write the same function using an arrow function. 
 Functional programmers write a lot of small functions, and the arrow function syntax makes that much easier:
