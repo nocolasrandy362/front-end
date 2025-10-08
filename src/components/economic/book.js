@@ -145,6 +145,7 @@ through the site, they actually stay on the same page. JavaScript destroys and c
 new user interface as the user interacts with the application. It may feel as though you
 are jumping from page to page, but you are actually still on the same HTML page and
 JavaScript is doing the heavy lifting.
+
 The DOM API is a collection of objects that JavaScript can use to interact with the
 browser to modify the DOM. If you have used document.createElement or
 document.appendChild, you have worked with the DOM API. Updating or chang‐
