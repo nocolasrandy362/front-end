@@ -3,42 +3,57 @@
 CHAPTER 3
 Functional Programming with JavaScript
 
-When you start to explore the world of React programming, you’ll notice that the topic of functional programming comes up a lot. 
-Functional techniques are being used more and more in JavaScript projects.
-You may have already written functional JavaScript code without thinking about it. 
-If you’ve mapped or reduced an array, then you’re already on your way to becoming a functional programmer. 
-React, Flux, and Redux all fit within the functional JavaScript paradigm. 
-Understanding the basic concepts of functional programming will elevate your knowledge of structuring React applications.
-If you are wondering where this functional trend came from, the answer is the 1930s,
-with the invention of lambda calculus, or λ-calculus.
- Functions have been a part of calculus since it emerged in the 17th century. 
- Functions can be sent to functions as arguments or returned from functions as results. 
- More complex functions, called higher-order functions, can manipulate functions and use them as either arguments or results or both. 
- In the 1930s, Alonzo Church was at Princeton experimenting with these higher-order functions when he invented lambda calculus.
-In the late 1950s, John McCarthy took the concepts derived from λ-calculus and applied them to a new programming language called Lisp. 
+1. When you start to explore the world of React programming, you’ll notice that the topic of functional programming comes up a lot. 
+2. Functional techniques are being used more and more in JavaScript projects.
+3. You may have already written functional JavaScript code without thinking about it. 
+4. If you’ve mapped or reduced an array, then you’re already on your way to becoming a functional programmer. 
+5. React, Flux, and Redux all fit within the functional JavaScript paradigm. 
+6. Understanding the basic concepts of functional programming will elevate your knowledge of structuring React applications.
+7. If you are wondering where this functional trend came from, the answer is the 1930s,with the invention of lambda calculus, or λ-calculus.
+8. Functions have been a part of calculus since it emerged in the 17th century. 
+9. Functions can be sent to functions as arguments or returned from functions as results. 
+10. More complex functions, called higher-order functions, can manipulate functions and use them as either arguments or results or both. 
+11. In the 1930s, Alonzo Church was at Princeton experimenting with these higher-order functions when he invented lambda calculus.
+12. In the late 1950s, John McCarthy took the concepts derived from λ-calculus and applied them to a new programming language called Lisp. 
 Lisp implemented the concept of higher-order functions and functions as first-class members or first-class citizens. 
-A function is considered a first-class member when it can be declared as a variable and sent to functions as an argument. 
+14. A function is considered a first-class member when it can be declared as a variable and sent to functions as an argument. 
 These functions can even be returned from functions.
 
-In this chapter, we are going to go over some of the key concepts of functional pro‐
-gramming, and we’ll cover how to implement functional techniques with JavaScript.
-What It Means to Be Functional
-JavaScript supports functional programming because JavaScript functions are first
-class citizens. This means that functions can do the same things that variables can do.
-ES6 adds language improvements that can beef up your functional programming
-techniques, including arrow functions, promises, and the spread operator (see Chap‐
-ter 2).
-In JavaScript, functions can represent data in your application. You may have noticed
-that you can declare functions with the var keyword the same way you can declare
-strings, numbers, or any other variables:
+1.当你开始探索 React 编程的世界时，你会注意到函数式编程这个话题出现得非常频繁。
+2.函数式技术正在 JavaScript 项目中被越来越多地使用。
+3.你可能已经编写过函数式 JavaScript 代码，而没有意识到这一点。
+4.如果你已经映射或归约过一个数组，那么你已经在成为函数式程序员的路上了。
+5.React、Flux 和 Redux 都符合函数式 JavaScript 范式。
+6.理解函数式编程的基本概念将提升你对构建 React 应用程序的知识。
+7.如果你想知道（疑惑）这种函数式趋势的来源，答案是 1930 年代，λ-演算的发明。
+8.函数 「自17世纪微积分出现以来」 一直是微积分的一部分。
+9.函数可以作为参数传递给函数，也可以作为结果从函数返回。
+10. 更复杂的函数，称为高阶函数，可以操纵函数 并将它们用作参数或结果，或者两者兼而有之。
+11. 在 1930 年代，Alonzo Church 在普林斯顿实验这些高阶函数时 发明了 λ-演算。
+12. 在 1950 年代末期，John McCarthy 将从 λ-演算中得出的概念 应用于一种名为 Lisp 的新编程语言。
+Lisp 实现了高阶函数和作为一等成员或一等公民的函数的概念。
+14.当一个函数可以被声明为变量并作为参数传递给函数时，它被认为是一个一等成员。
+
+
+这些函数甚至可以从函数中返回。
+
+
+
+
+
+In this chapter, we are going to go over some of the key concepts of functional programming, and we’ll cover how to implement functional techniques with JavaScript.
+What It Means to Be Functional JavaScript supports functional programming because JavaScript functions are first class citizens. 
+This means that functions can do the same things that variables can do.
+ES6 adds language improvements that can beef up your functional programming techniques, including arrow functions, promises, and the spread operator (see Chapter 2).
+In JavaScript, functions can represent data in your application. You may have noticed that you can declare functions with the var keyword the same way you can declare strings, numbers, or any other variables:
 var log = function(message) {
  console.log(message)
 };
 log("In JavaScript functions are variables")
 // In JavaScript, functions are variables
-With ES6, we can write the same function using an arrow function. Functional pro‐
-grammers write a lot of small functions, and the arrow function syntax makes that
-much easier:
+
+With ES6, we can write the same function using an arrow function. 
+Functional programmers write a lot of small functions, and the arrow function syntax makes that much easier:
 const log = message => console.log(message)
 Since functions are variables, we can add them to objects:
 const obj = {
@@ -49,10 +64,10 @@ const obj = {
 }
 obj.log(obj.message)
 // They can be added to objects like variables
-Both of these statements do the same thing: they store a function in a variable called
-log. Additionally, the const keyword was used to declare the second function, which
-will prevent it from being overwritten.
+Both of these statements do the same thing: they store a function in a variable called log. 
+Additionally, the const keyword was used to declare the second function, which will prevent it from being overwritten.
 We can also add functions to arrays in JavaScript:
+
 const messages = [
  "They can be inserted into arrays",
  message => console.log(message),
@@ -62,18 +77,15 @@ const messages = [
 
 CHAPTER 4
 Pure React
-In order to understand how React runs in the browser, we will be working purely
-with React in this chapter. We will not introduce JSX, or JavaScript as XML, until the
-next chapter. You may have worked with React in the past without ever looking at the
-pure React code that is generated when we transpile JSX into React. You can success‐
-fully use React without looking at pure React. However, if you take the time to under‐
-stand what is going on behind the scenes, you will be more efficient, especially when
-it comes time to debug. That is our goal in this chapter: to look under the hood and
-understand how React works.
+In order to understand how React runs in the browser, we will be working purely with React in this chapter. 
+We will not introduce JSX, or JavaScript as XML, until the next chapter. 
+You may have worked with React in the past without ever looking at the pure React code that is generated when we transpile JSX into React. 
+You can successfully use React without looking at pure React. 
+However, if you take the time to understand what is going on behind the scenes, you will be more efficient, especially when it comes time to debug. 
+That is our goal in this chapter: to look under the hood and understand how React works.
 Page Setup
-In order to work with React in the browser, we need to include two libraries: React
-and ReactDOM. React is the library for creating views. ReactDOM is the library used
-to actually render the UI in the browser.
+In order to work with React in the browser, we need to include two libraries: React and ReactDOM. React is the library for creating views. 
+ReactDOM is the library used to actually render the UI in the browser.
 ReactDOM
 React and ReactDOM were split into two packages for version 0.14. The release notes
 state: “The beauty and the essence of React has nothing to do with browsers or the
@@ -145,16 +157,12 @@ of a particular element and reconstruct them than it would be to leave those chi
  The problem is that we may
 not have the time or the advanced knowledge of JavaScript to work efficiently with
 the DOM API every time we build a new application. The solution is React.
-React is a library that is designed to update the browser DOM for us. We no longer
-have to be concerned with the complexities associated with building performant SPAs
-because React can do that for us. With React, we do not interact with the DOM API
-directly. Instead, we interact with a virtual DOM, or set of instructions that React will
-use to construct the UI and interact with the browser.5
-The virtual DOM is made up of React elements, which conceptually seem similar to
-HTML elements, but are actually JavaScript objects. It is much faster to work directly
-with JavaScript objects than it is to work with the DOM API. We make changes to a
-JavaScript object, the virtual DOM, and React renders those changes for us using the
-DOM API as efficiently as possible.
+React is a library that is designed to update the browser DOM for us. We no longer have to be concerned with the complexities associated with building performant SPAs because React can do that for us. 
+With React, we do not interact with the DOM API directly. 
+Instead, we interact with a virtual DOM, or set of instructions that React will use to construct the UI and interact with the browser.
+The virtual DOM is made up of React elements, which conceptually seem similar to HTML elements, but are actually JavaScript objects. 
+It is much faster to work directly with JavaScript objects than it is to work with the DOM API. 
+We make changes to a JavaScript object, the virtual DOM, and React renders those changes for us using the DOM API as efficiently as possible.
 React Elements
 The browser DOM is made up of DOM elements. Similarly, the React DOM is made
 up of React elements. DOM elements and React elements may look the same, but
@@ -165,13 +173,11 @@ We can create a React element to represent an h1 using React.createElement:
 React.createElement("h1", null, "Baked Salmon")
 The first argument defines the type of element that we wish to create. In this case, we
 want to create a heading-one element. The third argument represents the element’s
-children, any nodes that are inserted between the opening and closing tag. The sec‐
-ond argument represents the element’s properties. This h1 currently does not have
-any properties.
+children, any nodes that are inserted between the opening and closing tag. 
+The second argument represents the element’s properties. This h1 currently does not have any properties.
 During rendering, React will convert this element to an actual DOM element:
 <h1>Baked Salmon</h1>
-When an element has attributes, they can be described with properties. Here is a sam‐
-ple of an HTML h1 tag that has id and data-type attributes:
+When an element has attributes, they can be described with properties. Here is a sample of an HTML h1 tag that has id and data-type attributes:
 
 
 
