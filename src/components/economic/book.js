@@ -2,28 +2,23 @@
  * 
 CHAPTER 3
 Functional Programming with JavaScript
-When you start to explore the world of React programming, you’ll notice that the
-topic of functional programming comes up a lot. Functional techniques are being
-used more and more in JavaScript projects.
-You may have already written functional JavaScript code without thinking about it. If
-you’ve mapped or reduced an array, then you’re already on your way to becoming a
-functional programmer. React, Flux, and Redux all fit within the functional JavaScript
-paradigm. Understanding the basic concepts of functional programming will elevate
-your knowledge of structuring React applications.
+
+When you start to explore the world of React programming, you’ll notice that the topic of functional programming comes up a lot. 
+Functional techniques are being used more and more in JavaScript projects.
+You may have already written functional JavaScript code without thinking about it. 
+If you’ve mapped or reduced an array, then you’re already on your way to becoming a functional programmer. 
+React, Flux, and Redux all fit within the functional JavaScript paradigm. 
+Understanding the basic concepts of functional programming will elevate your knowledge of structuring React applications.
 If you are wondering where this functional trend came from, the answer is the 1930s,
-with the invention of lambda calculus, or λ-calculus.1
- Functions have been a part of
-calculus since it emerged in the 17th century. Functions can be sent to functions as
-arguments or returned from functions as results. More complex functions, called
-higher-order functions, can manipulate functions and use them as either arguments or
-results or both. In the 1930s, Alonzo Church was at Princeton experimenting with
-these higher-order functions when he invented lambda calculus.
-In the late 1950s, John McCarthy took the concepts derived from λ-calculus and
-applied them to a new programming language called Lisp. Lisp implemented the con‐
-cept of higher-order functions and functions as first-class members or first-class citi‐
-zens. A function is considered a first-class member when it can be declared as a
-variable and sent to functions as an argument. These functions can even be returned
-from functions.
+with the invention of lambda calculus, or λ-calculus.
+ Functions have been a part of calculus since it emerged in the 17th century. 
+ Functions can be sent to functions as arguments or returned from functions as results. 
+ More complex functions, called higher-order functions, can manipulate functions and use them as either arguments or results or both. 
+ In the 1930s, Alonzo Church was at Princeton experimenting with these higher-order functions when he invented lambda calculus.
+In the late 1950s, John McCarthy took the concepts derived from λ-calculus and applied them to a new programming language called Lisp. 
+Lisp implemented the concept of higher-order functions and functions as first-class members or first-class citizens. 
+A function is considered a first-class member when it can be declared as a variable and sent to functions as an argument. 
+These functions can even be returned from functions.
 
 In this chapter, we are going to go over some of the key concepts of functional pro‐
 gramming, and we’ll cover how to implement functional techniques with JavaScript.
