@@ -74,8 +74,6 @@ Both of these statements do the same thing: they store a function in a variable 
 Additionally, the const keyword was used to declare the second function, which will prevent it from being overwritten.
 We can also add functions to arrays in JavaScript:
 
-
-
  **       **       **         **          **        **
 
 CHAPTER 4
@@ -93,7 +91,6 @@ ReactDOM
 9.  React and ReactDOM were split into two packages for version 0.14. The release notes
     state(indicate): “The beauty and the essence of React has nothing to do with browsers or the DOM... 
     This [splitting into two packages] paves the way to writing components that can be shared between the web version of React and React Native.”
-
 
 10. Instead of assuming that React will render only in the browser, future releases will aim to support rendering for a variety of platforms.
 
@@ -149,41 +146,55 @@ Let’s say that you have to construct an HTML hierarchy for a recipe. A possibl
 
 
 
-In HTML, elements relate to each other in a hierarchy that resembles a family tree.
-We could say that the root element has three children: a heading, an unordered list of
-ingredients, and a section for the instructions.
-Traditionally, websites have consisted of independent HTML pages. When the user
-navigated these pages, the browser would request and load different HTML docu‐
-ments. The invention of AJAX brought us the single-page application, or SPA. Since
-browsers could request and load tiny bits of data using AJAX, entire web applications
-could now run out of a single page and rely on JavaScript to update the user interface.
-In an SPA, the browser initially loads one HTML document. As users navigate
-through the site, they actually stay on the same page. JavaScript destroys and creates a
-new user interface as the user interacts with the application. It may feel as though you
-are jumping from page to page, but you are actually still on the same HTML page and
-JavaScript is doing the heavy lifting.
+1. In HTML, elements relate to each other in a hierarchy that resembles a family tree.
+2. We could say that the root element has three children: a heading, an unordered list of ingredients, and a section for the instructions.
+3. Traditionally, websites have consisted of independent HTML pages. 
+4. When the user navigated these pages, the browser would request and load different HTML documents. The invention of AJAX brought us the single-page application, or SPA. 
+5. Since browsers could request and load tiny bits of data using AJAX, entire web applications could now run out of a single page and rely on JavaScript to update the user interface.
+6. In an SPA, the browser initially loads one HTML document. As users navigate through the site, they actually stay on the same page. 
+7. JavaScript destroys and creates a new user interface as the user interacts with the application. 
+8. It may feel as though you are jumping from page to page, but you are actually still on the same HTML page and JavaScript is doing the heavy lifting.
+9. The DOM API is a collection of objects that JavaScript can use to interact with the browser to modify the DOM. 
+10. If you have used document.createElement or document.appendChild, you have worked with the DOM API. 
+11. Updating or changing rendered DOM elements in JavaScript is relatively easy.However, the process of inserting new elements is painfully slow.
+12. This means if web developers are meticulous about how they make changes to UI, they can improve the performance of their applications.
 
-The DOM API is a collection of objects that JavaScript can use to interact with the browser to modify the DOM. 
-If you have used document.createElement or document.appendChild, you have worked with the DOM API. 
-Updating or changing rendered DOM elements in JavaScript is relatively easy.
- However, the process of inserting new elements is painfully slow.
- This means if web developers are meticulous about how they make changes to UI, they can improve the performance of their applications.
-Managing DOM changes with JavaScript efficiently can become very complicated
-and time-consuming. From a coding perspective, it is easier to clear all the children
-of a particular element and reconstruct them than it would be to leave those child elements in place and attempt to efficiently update them.4
- The problem is that we may
-not have the time or the advanced knowledge of JavaScript to work efficiently with
-the DOM API every time we build a new application. The solution is React.
-React is a library that is designed to update the browser DOM for us. 
-We no longer have to be concerned with the complexities associated with building performant SPAs because React can do that for us. 
-With React, we do not interact with the DOM API directly. 
-Instead, we interact with a virtual DOM, or set of instructions that React will use to construct the UI and interact with the browser.
-The virtual DOM is made up of React elements, which conceptually seem similar to HTML elements, but are actually JavaScript objects. 
-It is much faster to work directly with JavaScript objects than it is to work with the DOM API. 
-We make changes to a JavaScript object, the virtual DOM, and React renders those changes for us using the DOM API as efficiently as possible.
-React Elements
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.这意味着如果Web开发者在如何更改用户界面方面非常谨慎，他们就能提升其应用程序的性能。
 
 
+ 1. Managing DOM changes with JavaScript efficiently can become very complicated and time-consuming. 
+ 2. From a coding perspective, it is easier to clear all the children of a particular element and reconstruct them than it would be to leave those child elements in place and attempt to efficiently update them.
+ 3. The problem is that we may not have the time or the advanced knowledge of JavaScript to work efficiently with the DOM API every time we build a new application. 
+ 4. The solution is React.React is a library that is designed to update the browser DOM for us. 
+ 5. We no longer have to be concerned with the complexities associated with building performant SPAs because React can do that for us. 
+ 6. With React, we do not interact with the DOM API directly. 
+ 7. Instead, we interact with a virtual DOM, or set of instructions that React will use to construct the UI and interact with the browser.
+ 8. The virtual DOM is made up of React elements, which conceptually seem similar to HTML elements, but are actually JavaScript objects. 
+ 9. It is much faster to work directly with JavaScript objects than it is to work with the DOM API. 
+10. We make changes to a JavaScript object, the virtual DOM, and React renders those changes for us using the DOM API as efficiently as possible.
+
+ 1.高效地使用 JavaScript 管理 DOM 变化可能会变得非常复杂且耗时。
+ 2.从编码的角度来看，清除某个特定元素的所有子元素并重建它们，比保留这些子元素并尝试高效地更新它们更容易。
+ 3.问题是，每次我们构建一个新应用时，我们可能没有时间或足够的 JavaScript 知识来高效地使用 DOM API。
+ 4.解决方案是 React。React 是一个旨在为我们更新浏览器 DOM 的库。
+ 5.我们不再需要关心与构建高性能单页应用相关的复杂性，因为 React 可以为我们做这些事
+ 6.使用 React 时，我们不直接与 DOM API 交互
+ 7.相反，我们与虚拟 DOM 交互，或者说是一组 React 将用来构建用户界面并与浏览器交互的指令。
+ 8.虚拟 DOM 由 React 元素组成，这些元素在概念上看起来类似于 HTML 元素，但实际上却是 JavaScript 对象。
+ 9.直接与 JavaScript 对象工作比与 DOM API 工作要快得多。
+ 10.我们对 JavaScript 对象（即虚拟 DOM）做出更改，而 React 使用 DOM API 尽可能高效地为我们渲染这些更改
+ React Elements
 1. The browser DOM is made up of DOM elements. Similarly, the React DOM is made up of React elements. 
 2. DOM elements and React elements may look the same, but they are actually quite different. 
 3. A React element is a description of what the actual DOM element should look like. 
@@ -199,8 +210,8 @@ React.createElement("h1", null, "Baked Salmon")
 
 1. 浏览器 DOM 由 DOM 元素组成。同样地，React DOM 由 React 元素组成
 2. DOM 元素和 React 元素可能看起来一样，但它们实际上相当不同。
-3. 一个 React 元素是对实际 DOM 元素应有外观的描述。
-4. 换句话说，React 元素是关于浏览器 DOM 应如何被创建的指令
+3. 一个 React 元素是对 '实际 DOM 元素应有外观' 的描述。
+4. 换句话说，React 元素是 '关于浏览器 DOM 应如何被创建' 的指令
 5. 我们可以使用 React.createElement 创建一个表示 h1 的 React 元素：React.createElement("h1", null, "Baked Salmon")
 6. 第一个参数定义了我们希望创建的元素类型。
 7. 在这种情况下，我们想要创建一个一级标题元素。第三个参数表示该元素的子元素，即任何插入在开始标签和结束标签之间的节点。
@@ -208,7 +219,4 @@ React.createElement("h1", null, "Baked Salmon")
 9. 在渲染期间，React 会将此元素转换为一个实际的 DOM 元素：
 10. 当一个元素具有属性时，它们可以用属性来描述。这是一个具有 id 和 data-type 属性的 HTML h1 标签的示例
 
- * 
- * 
- * 
  */
