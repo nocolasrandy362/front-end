@@ -5,124 +5,72 @@
  * 
 Introduction
 What does it mean to have a Bitcoin?
-Many people have heard of Bitcoin, that it's a fully digital currency
-with no government to issue it, that no banks need to manage accounts
-and verify transactions, and that no one really knows who invented it.
+Many people have heard of Bitcoin, that it's a fully digital currency with no government to issue it, that no banks need to manage accounts and verify transactions, and that no one really knows who invented it.
 And yet many people don't know the answer to this question, at least not in full.
-To get there, and to make sure that the technical details underlying
-the answer actually feel motivated, we're going to walk through,
-step by step, how you might have invented your own version of Bitcoin.
+To get there, and to make sure that the technical details underlying the answer actually feel motivated, we're going to walk through,step by step, how you might have invented your own version of Bitcoin.
 We'll start with you keeping track of payments with your friends using a communal ledger,
 and then as you start to trust your friends and the world around you less and less,
 and if you're clever enough to bring in a few ideas from cryptography to help circumvent
 the need for trust, what you end up with is what's called a cryptocurrency.
-Bitcoin is just the first implemented example of a cryptocurrency,
-and now there are thousands more on exchanges with traditional currencies.
-Walking the path of inventing your own can help to set the foundations
-for understanding some of the more recent players in the game,
-and recognizing when and why there's room for different design choices.
-In fact, one of the reasons I chose this topic is that in the last year there's
-been a huge amount of attention, investment, and hype directed at these currencies.
-I'm not going to comment or speculate on the current or future exchange rates,
-but I think we'd all agree that anyone looking to buy a cryptocurrency should really
-know what it is.
-And I don't just mean in terms of analogies with vague connections to gold mining,
-I mean an actual direct description of what the computers are doing when we send,
-receive, and create cryptocurrencies.
-One thing worth stressing is that even though you and I are going to dig into the
-details here, and that takes meaningful time,
-you don't actually need to know those details if you just want to use the
-cryptocurrency, just like you don't need to know the details of what happens
-under the hood when you swipe a credit card.
-Like any digital payment, there's lots of user-friendly applications that let
-you just send and receive the currencies without thinking about what's going on.
-The difference is that the backbone underlying this is not a bank that
-verifies transactions, instead it's a clever system of decentralized
-trustless verification based on some of the math born in cryptography.
-Ledgers and digital signatures
-But to start I want you to actually set aside the thought
-of cryptocurrencies and all that just for a few minutes.
-We're going to begin the story with something more down to earth,
-ledgers and digital signatures.
-If you and your friends exchange money pretty frequently,
-paying your share of the dinner bill and such,
-it can be inconvenient to exchange cash all the time.
-So you might keep a communal ledger that records all the
-payments you intend to make at some point in the future.
+
+Bitcoin is just the first implemented example of a cryptocurrency,and now there are thousands more on exchanges with traditional currencies.
+
+Walking the path of inventing your own can help to set the foundations for understanding some of the more recent players in the game,and recognizing when and why there's room for different design choices.
+
+In fact, one of the reasons I chose this topic is that in the last year there's been a huge amount of attention, investment, and hype directed at these currencies.
+I'm not going to comment or speculate on the current or future exchange rates, but I think we'd all agree that anyone looking to buy a cryptocurrency should really know what it is.
+And I don't just mean in terms of analogies with vague connections to gold mining, I mean an actual direct description of what the computers are doing when we send, receive, and create cryptocurrencies.
+One thing worth stressing is that even though you and I are going to dig into the details here, and that takes meaningful time, you don't actually need to know those details if you just want to use the cryptocurrency, just like you don't need to know the details of what happens under the hood when you swipe a credit card.
+Like any digital payment, there's lots of user-friendly applications that let you just send and receive the currencies without thinking about what's going on.
+The difference is that the backbone underlying this is not a bank that verifies transactions, instead it's a clever system of decentralized trustless verification based on some of the math born in cryptography.
+Ledgers and digital signatures But to start I want you to actually set aside the thought of cryptocurrencies and all that just for a few minutes.
+We're going to begin the story with something more down to earth,ledgers and digital signatures.
+
+If you and your friends exchange money pretty frequently,paying your share of the dinner bill and such,it can be inconvenient to exchange cash all the time.
+So you might keep a communal ledger that records all the payments you intend to make at some point in the future.
 Alice pays Bob $20, Bob pays Charlie $40, things like that.
-This ledger is going to be something public and accessible to everyone,
-like a website where anyone can go and add new lines.
-And let's say at the end of every month you all get together,
-look at the list of transactions, and settle up.
+This ledger is going to be something public and accessible to everyone,like a website where anyone can go and add new lines.
+And let's say at the end of every month you all get together,look at the list of transactions, and settle up.
 
 
 /*********************** */
 /****** 
 
 
-If you spent more than you received, you put that money in the pot,
-and if you received more than you spent, you take that money out.
+If you spent more than you received, you put that money in the pot,and if you received more than you spent, you take that money out.
 So the protocol for being part of this very simple system might look like this.
-Anyone can add lines to the ledger, and at the end
-of every month you all get together and settle up.
+Anyone can add lines to the ledger, and at the end of every month you all get together and settle up.
 Now one problem with a public ledger like this is that anyone can add a line.
-So what's to prevent Bob from going and writing
-Alice pays Bob $100 without Alice approving?
-How are we supposed to trust that all of these
-transactions are what the sender meant them to be?
+So what's to prevent Bob from going and writing Alice pays Bob $100 without Alice approving?
+How are we supposed to trust that all of these transactions are what the sender meant them to be?
 Well this is where the first bit of cryptography comes in, digital signatures.
-Like handwritten signatures, the idea here is that Alice should be able to add
-something next to that transaction that proves that she has seen it and that she's
-approved of it, and it should be infeasible for anyone else to forge that signature.
+Like handwritten signatures, the idea here is that Alice should be able to add something next to that transaction that proves that she has seen it and that she's approved of it, and it should be infeasible for anyone else to forge that signature.
 At first, it might seem like a digital signature shouldn't even be possible.
 I mean, whatever data makes up that signature can just be read and copied by a computer.
 So how do you prevent forgeries?
-Well the way this works is that everyone generates what's called a public
-key-private key pair, each of which looks like some string of bits.
-The private key is sometimes also called a secret key,
-so we can abbreviate it as SK while abbreviating the public key as PK.
+Well the way this works is that everyone generates what's called a public key-private key pair, each of which looks like some string of bits.
+The private key is sometimes also called a secret key,so we can abbreviate it as SK while abbreviating the public key as PK.
 As the name suggests, this secret key is something you want to keep to yourself.
-In the real world, your handwritten signature looks
-the same no matter what document you're signing.
-But a digital signature is actually much stronger,
-because it changes for different messages.
-It looks like some string of 1s and 0s, commonly something like 256 bits,
-and altering the message even slightly completely changes what
-the signature on that message should look like.
-Speaking a little more formally, producing a signature involves a
-function that depends both on the message itself and on your private key.
-The private key ensures that only you can produce that signature,
-and the fact that it depends on the message means that no one can
-just copy one of your signatures and forge it on another message.
-Hand-in-hand with this is a second function used to verify that a signature is valid,
-and this is where the public key comes into play.
-All it does is output true or false to indicate if this was a signature produced
-by the private key associated with the public key you're using for verification.
-I won't go into the details of how exactly both these functions work,
-but the idea is that it should be completely infeasible to
-find a valid signature if you don't know the secret key.
-Specifically, there's no strategy better than just guessing and checking random
-signatures, which you can check using the public key that everyone knows.
+In the real world, your handwritten signature looks the same no matter what document you're signing.
+But a digital signature is actually much stronger,because it changes for different messages.
+It looks like some string of 1s and 0s, commonly something like 256 bits, and altering the message even slightly completely changes what the signature on that message should look like.
+Speaking a little more formally, producing a signature involves a function that depends both on the message itself and on your private key.
+The private key ensures that only you can produce that signature, and the fact that it depends on the message means that no one can just copy one of your signatures and forge it on another message.
+Hand-in-hand with this is a second function used to verify that a signature is valid, and this is where the public key comes into play.
+All it does is output true or false to indicate if this was a signature produced by the private key associated with the public key you're using for verification.
+I won't go into the details of how exactly both these functions work, but the idea is that it should be completely infeasible to find a valid signature if you don't know the secret key.
+Specifically, there's no strategy better than just guessing and checking random signatures, which you can check using the public key that everyone knows.
 Now think about how many signatures there are with a length of 256 bits.
 That's 2 to the power of 256!
 This is a stupidly large number.
 To call it astronomically large would be giving way too much credit to astronomy.
-In fact, I made a supplemental video devoted just
-to illustrating what a huge number this is.
-Right here, let's just say that when you verify that a signature against a given message
-is valid, you can feel extremely confident that the only way someone could have produced
-it is if they knew the secret key associated with the public key you used for
-verification.
-Making sure people sign transactions on the ledger is pretty good,
-but there's one slight loophole.
-If Alice signs a transaction like Alice pays Bob $100,
-even though Bob can't forge Alice's signature on a new message,
-he could just copy that same line as many times as he wants.
+In fact, I made a supplemental video devoted just to illustrating what a huge number this is.
+Right here, let's just say that when you verify that a signature against a given message is valid, you can feel extremely confident that the only way someone could have produced it is if they knew the secret key associated with the public key you used for verification.
+Making sure people sign transactions on the ledger is pretty good,but there's one slight loophole.
+If Alice signs a transaction like Alice pays Bob $100,even though Bob can't forge Alice's signature on a new message,he could just copy that same line as many times as he wants.
 I mean, that message-signature combination remains valid.
-To get around this, we make it so that when you sign a transaction,
-the message has to include some sort of unique ID associated with that transaction.
-That way, if Alice pays Bob $100 multiple times,
-each one of those lines on the ledger requires a completely new signature.
+To get around this, we make it so that when you sign a transaction,the message has to include some sort of unique ID associated with that transaction.
+That way, if Alice pays Bob $100 multiple times,each one of those lines on the ledger requires a completely new signature.
 Alright, great. Digital signatures remove a huge aspect of trust in this initial protocol.
 The ledger is the currency
 But even still, if you were to really do this,
@@ -131,11 +79,8 @@ Namely, you're trusting that everyone will actually follow
 through and settle up in cash at the end of each month.
 What if, for example, Charlie racks up thousands
 of dollars in debt and just refuses to show up?
-The only real reason to revert back to cash to settle up is if some people,
-I'm looking at you Charlie, owe a lot of money.
-So maybe you have the clever idea that you never actually have to settle up in cash as
-long as you have some way to prevent people from spending too much more than they take
-in.
+The only real reason to revert back to cash to settle up is if some people,I'm looking at you Charlie, owe a lot of money.
+So maybe you have the clever idea that you never actually have to settle up in cash as long as you have some way to prevent people from spending too much more than they take in.
 Maybe you start by having everyone pay $100 into the pot,
 and then have the first few lines of the ledger read Alice gets $100, Bob gets $100,
 Charlie gets $100, etc.
@@ -330,80 +275,48 @@ but without broadcasting that block to the rest of the network,
 that way everyone else still thinks she has those 100 Ledger dollars.
 To do this, she would have to find a valid proof of work before all the other miners,
 each working on their own block.
-And that could definitely happen, maybe Alice just happens
-to win this miniature lottery before everyone else.
-But Bob is still going to be hearing the broadcasts made by other miners,
-so to keep him believing this fraudulent block,
-Alice would have to do all the work herself to keep adding blocks on this
-special fork in Bob's blockchain that's different from what he's hearing
-from the rest of the miners.
+And that could definitely happen, maybe Alice just happens to win this miniature lottery before everyone else.
+But Bob is still going to be hearing the broadcasts made by other miners,so to keep him believing this fraudulent block,
+Alice would have to do all the work herself to keep adding blocks on this special fork in Bob's blockchain that's different from what he's hearing from the rest of the miners.
 Remember, as per the protocol, Bob always trusts the longest chain he knows about.
-Alice might be able to keep this up for a few blocks if just by chance she finds
-blocks more quickly than the rest of the miners on the network all combined.
+Alice might be able to keep this up for a few blocks if just by chance she finds blocks more quickly than the rest of the miners on the network all combined.
 But unless she has close to 50% of the computing resources among all of the miners,
-the probability becomes overwhelming that the blockchain that all the other miners
-are working on grows faster than the single fraudulent blockchain Alice is feeding to
-Bob.
+the probability becomes overwhelming that the blockchain that all the other miners are working on grows faster than the single fraudulent blockchain Alice is feeding to Bob.
 
 /********** */
 /***** 
 
 
-So after enough time, Bob will just reject what he's hearing from
-Alice in favor of the longer chain that everyone else is working on.
+So after enough time, Bob will just reject what he's hearing from Alice in favor of the longer chain that everyone else is working on.
 Notice, that means you shouldn't necessarily trust a new block you hear immediately.
 Instead, you should wait for several new blocks to be added on top of it.
-If you still haven't heard of any longer blockchains,
-you can trust that this block is part of the same chain that everyone else is using.
-Block times, halvenings, and transaction fees
-And with that, we've hit all the main ideas.
-This distributed ledger system based on a proof of work is more or less
-how the Bitcoin protocol works, and how many other cryptocurrencies work.
+If you still haven't heard of any longer blockchains,you can trust that this block is part of the same chain that everyone else is using.
+Block times, halvenings, and transaction fees And with that, we've hit all the main ideas.
+This distributed ledger system based on a proof of work is more or less how the Bitcoin protocol works, and how many other cryptocurrencies work.
 There's just a few details to clear up.
-Earlier I said that the proof of work might be to find a special
-number so that the hash of the block starts with 60 zeros.
-Well, the way the actual Bitcoin protocol works is to periodically change that
-number of zeros so that it should take, on average, 10 minutes to find a new block.
-So as there are more and more miners added to the network,
-the challenge gets harder and harder in such a way that this
-miniature lottery only has about one winner every 10 minutes.
+Earlier I said that the proof of work might be to find a special number so that the hash of the block starts with 60 zeros.
+Well, the way the actual Bitcoin protocol works is to periodically change that number of zeros so that it should take, on average, 10 minutes to find a new block.
+So as there are more and more miners added to the network,the challenge gets harder and harder in such a way that this miniature lottery only has about one winner every 10 minutes.
 Many newer cryptocurrencies have much shorter block times than that.
 And all of the money in Bitcoin ultimately comes from some block reward.
 In the beginning, these rewards were 50 Bitcoin per block.
-There's actually a great website you can go to called Block
-Explorer that makes it easy to look through the Bitcoin blockchain.
-And if you look at the very first few blocks on the chain,
-they contain no transactions other than that 50 Bitcoin reward to the miner.
+There's actually a great website you can go to called Block Explorer that makes it easy to look through the Bitcoin blockchain.
+And if you look at the very first few blocks on the chain,they contain no transactions other than that 50 Bitcoin reward to the miner.
 But every 210,000 blocks, which is about every 4 years, that reward gets cut in half.
 So right now, the reward is 12.5 Bitcoin per block.
-And because this reward decreases geometrically over time,
-it means there will never be more than 21 million Bitcoin in existence.
+And because this reward decreases geometrically over time,it means there will never be more than 21 million Bitcoin in existence.
 However, this doesn't mean miners will stop earning money.
 In addition to the block reward, miners can also pick up transaction fees.
-The way this works is that whenever you make a payment,
-you can purely optionally include a transaction fee with it
-that will go to the miner of whichever block includes that payment.
-The reason you might do that is to incentivize miners to actually
-include the transaction you broadcast into the next block.
-You see, in Bitcoin, each block is limited to about 2400 transactions,
-which many critics argue is unnecessarily restrictive.
-For comparison, Visa processes an average of about 1700 transactions per second,
-and they're capable of handling more than 24,000 per second.
-This comparatively slow processing on Bitcoin makes for higher transaction fees,
-since that's what determines which transactions miners choose to include in a new block.
+The way this works is that whenever you make a payment,you can purely optionally include a transaction fee with it that will go to the miner of whichever block includes that payment.
+The reason you might do that is to incentivize miners to actually include the transaction you broadcast into the next block.
+You see, in Bitcoin, each block is limited to about 2400 transactions,which many critics argue is unnecessarily restrictive.
+For comparison, Visa processes an average of about 1700 transactions per second,and they're capable of handling more than 24,000 per second.
+This comparatively slow processing on Bitcoin makes for higher transaction fees,since that's what determines which transactions miners choose to include in a new block.
 All of this is far from a comprehensive coverage of cryptocurrencies.
 There are still many nuances and alternate design choices that I haven't even touched.
-But my hope is that this can provide a stable WaitButWhy-style tree-trunk of
-understanding for anyone looking to add a few more branches with further reading.
-Like I said at the start, one of the motives behind this is that a lot of money has
-started flowing towards cryptocurrencies, and even though I don't want to make any
-claims about whether that's a good or bad investment,
-I really do think it's healthy for people getting into the game to at least know the
-fundamentals of the technology.
+But my hope is that this can provide a stable WaitButWhy-style tree-trunk of understanding for anyone looking to add a few more branches with further reading.
+Like I said at the start, one of the motives behind this is that a lot of money has started flowing towards cryptocurrencies, and even though I don't want to make any claims about whether that's a good or bad investment,I really do think it's healthy for people getting into the game to at least know the fundamentals of the technology.
 Thanks
 As always, my sincerest thanks to those of you making this channel possible on Patreon.
-I understand that not everyone is in a position to contribute,
-but if you're still interested in helping out,
-one of the best ways to do that is simply to share videos that you think
-might be interesting or helpful to others.
+I understand that not everyone is in a position to contribute,but if you're still interested in helping out,one of the best ways to do that is simply to share videos that you think might be interesting or helpful to others.
 I know you know that, but it really does help.
