@@ -98,10 +98,25 @@ ReactDOM
 
 10. Instead of assuming that React will render only in the browser, future releases will aim to support rendering for a variety of platforms.
 
+1. 为了理解 React 是如何在浏览器中运行的，我们将在本章中纯粹使用 React
+2. 我们直到下一章才会介绍 JSX，也就是 JavaScript as XML
+3. 在过去，你可能使用过 React，却从未看过将 JSX 编译为 React 时生成的纯 React 代码。
+4. 你可以成功使用 React，而无需查看纯 React 代码。
+5. 然而，如果你花时间去理解幕后发生的事情，你将会更高效，尤其是当需要调试时。
 
-We also need an HTML element that ReactDOM will use to render the UI. You can
-see how the scripts and HTML elements are added in Example 4-1. Both libraries are
-available as scripts from the Facebook CDN.
+   ------ it comes time to do：固定表达，“到了该做某事的时候
+6. 这正是本章的目标：深入了解并理解 React 的工作原理。
+
+  -------- look under the hood：习语，“深入了解内部机制”
+7. 为了在浏览器中使用 React，我们需要引入两个库：React 和 ReactDOM。React 是用于创建视图的库。
+8. ReactDOM 是用于在浏览器中实际渲染用户界面的库。
+9. React 和 ReactDOM 在 0.14 版本中被拆分为两个独立包。
+发布说明中指出：“React 的美感与本质与浏览器或 DOM 无关……这种（拆分为两个包的做法）为编写可在 Web 版 React 与 React Native 之间共享的组件铺平了道路。”
+10. 与其假设 React 只能在浏览器中渲染，未来的版本将致力于支持多种平台的渲染。
+
+We also need an HTML element that ReactDOM will use to render the UI. 
+You can see how the scripts and HTML elements are added in Example 4-1.
+Both libraries are available as scripts from the Facebook CDN.
 Example 4-1. HTML document setup with React
 <!DOCTYPE html>
 <html>
@@ -170,16 +185,14 @@ The virtual DOM is made up of React elements, which conceptually seem similar to
 It is much faster to work directly with JavaScript objects than it is to work with the DOM API. 
 We make changes to a JavaScript object, the virtual DOM, and React renders those changes for us using the DOM API as efficiently as possible.
 React Elements
-The browser DOM is made up of DOM elements. Similarly, the React DOM is made
-up of React elements. DOM elements and React elements may look the same, but
-they are actually quite different. A React element is a description of what the actual
-DOM element should look like. In other words, React elements are the instructions
-for how the browser DOM should be created.
+The browser DOM is made up of DOM elements. Similarly, the React DOM is made up of React elements. 
+DOM elements and React elements may look the same, but they are actually quite different. 
+A React element is a description of what the actual DOM element should look like. 
+In other words, React elements are the instructions for how the browser DOM should be created.
 We can create a React element to represent an h1 using React.createElement:
 React.createElement("h1", null, "Baked Salmon")
-The first argument defines the type of element that we wish to create. In this case, we
-want to create a heading-one element. The third argument represents the element’s
-children, any nodes that are inserted between the opening and closing tag. 
+The first argument defines the type of element that we wish to create. 
+In this case, we want to create a heading-one element. The third argument represents the element’s children, any nodes that are inserted between the opening and closing tag. 
 The second argument represents the element’s properties. This h1 currently does not have any properties.
 During rendering, React will convert this element to an actual DOM element:
 <h1>Baked Salmon</h1>
