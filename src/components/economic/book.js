@@ -165,8 +165,7 @@ JavaScript is doing the heavy lifting.
 
 The DOM API is a collection of objects that JavaScript can use to interact with the
 browser to modify the DOM. If you have used document.createElement or
-document.appendChild, you have worked with the DOM API. Updating or chang‐
-ing rendered DOM elements in JavaScript is relatively easy.2
+document.appendChild, you have worked with the DOM API. Updating or changing rendered DOM elements in JavaScript is relatively easy.2
  However, the process of
 inserting new elements is painfully slow.3
  This means if web developers are meticu‐
