@@ -91,9 +91,8 @@ Page Setup
 8. ReactDOM is the library used to actually render the UI in the browser.
 ReactDOM
 9.  React and ReactDOM were split into two packages for version 0.14. The release notes
-    state: “The beauty and the essence of React has nothing to do with browsers or the
-    DOM... This [splitting into two packages] paves the way to writing components that
-    can be shared between the web version of React and React Native.”
+    state(indicate): “The beauty and the essence of React has nothing to do with browsers or the DOM... 
+    This [splitting into two packages] paves the way to writing components that can be shared between the web version of React and React Native.”
 
 
 10. Instead of assuming that React will render only in the browser, future releases will aim to support rendering for a variety of platforms.
@@ -111,8 +110,9 @@ ReactDOM
 7. 为了在浏览器中使用 React，我们需要引入两个库：React 和 ReactDOM。React 是用于创建视图的库。
 8. ReactDOM 是用于在浏览器中实际渲染用户界面的库。
 9. React 和 ReactDOM 在 0.14 版本中被拆分为两个独立包。
-发布说明中指出：“React 的美感与本质与浏览器或 DOM 无关……这种（拆分为两个包的做法）为编写可在 Web 版 React 与 React Native 之间共享的组件铺平了道路。”
-10. 与其假设 React 只能在浏览器中渲染，未来的版本将致力于支持多种平台的渲染。
+发布说明中指出：“React 的美感与本质与浏览器或 DOM 无关……
+这种（拆分为两个包的做法）为编写可在 Web 版 React 与 React Native 之间共享的组件铺平了道路。”
+10. 与其假设 React 只能在浏览器中渲染，未来的版本将 致力于 支持多种平台的渲染。
 
 We also need an HTML element that ReactDOM will use to render the UI. 
 You can see how the scripts and HTML elements are added in Example 4-1.
