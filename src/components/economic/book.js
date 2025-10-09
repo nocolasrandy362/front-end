@@ -111,10 +111,16 @@ ReactDOM
 这种（拆分为两个包的做法）为编写'可在 Web 版 React 与 React Native 之间共享'的组件铺平了道路。”
 10. 与其假设 React 只能在浏览器中渲染，未来的版本将 致力于 支持多种平台的渲染。
 
-We also need an HTML element that ReactDOM will use to render the UI. 
-You can see how the scripts and HTML elements are added in Example 4-1.
-Both libraries are available as scripts from the Facebook CDN.
-Example 4-1. HTML document setup with React
+1.We also need an HTML element that ReactDOM will use to render the UI. 
+我们还需要一个ReactDOM将用来渲染用户界面的HTML元素。
+
+
+2.You can see how the scripts and HTML elements are added in Example 4-1.
+你可以在示例4-1中看到脚本和HTML元素是如何被添加的。
+3.Both libraries are available as scripts from the Facebook CDN.
+这两个库都可以作为脚本从Facebook的CDN获取。
+
+Example 4-1. HTML document setup with React --- 使用React的HTML文档设置
 <!DOCTYPE html>
 <html>
 <head>
