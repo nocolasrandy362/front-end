@@ -134,16 +134,17 @@ Example 4-1. HTML document setup with React
  </script>
 </body>
 </html>
-These are the minimum requirements for working with React in the browser. You can
-place your JavaScript in a separate file, but it must be loaded somewhere in the page
-after React has been loaded.
+1. These are the minimum requirements for working with React in the browser.
+2. You can place your JavaScript in a separate file, but it must be loaded somewhere in the page after React has been loaded.
 The Virtual DOM
-HTML is simply a set of instructions that a browser follows when constructing the
-document object model, or DOM. The elements that make up an HTML document
-become DOM elements when the browser loads HTML and renders the user inter‐
-face.
-Let’s say that you have to construct an HTML hierarchy for a recipe. A possible solution for such a task might look something like this:
-
+3. HTML is simply a set of instructions that a browser follows when constructing the document object model, or DOM.
+4. The elements that make up an HTML document become DOM elements when the browser loads HTML and renders the user interface.
+5. Let’s say that you have to construct an HTML hierarchy for a recipe. A possible solution for such a task might look something like this:
+1.这些是在浏览器中使用React的最低要求。
+2.你可以将你的JavaScript放在一个单独的文件中，但它必须在React被加载之后，在页面中的某个位置被加载。
+3.HTML只是浏览器在构建文档对象模型（即DOM）时所遵循的一组指令。
+4.构成HTML文档的元素在浏览器加载HTML并渲染用户界面时，会变成DOM元素。
+5.假设你必须为一个食谱构建一个HTML层级结构。对于这样一项任务，一个可能的解决方案可能看起来像这样
 
 
 1. In HTML, elements relate to each other in a hierarchy that resembles a family tree.
