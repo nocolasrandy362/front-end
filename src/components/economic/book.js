@@ -163,27 +163,27 @@ new user interface as the user interacts with the application. It may feel as th
 are jumping from page to page, but you are actually still on the same HTML page and
 JavaScript is doing the heavy lifting.
 
-The DOM API is a collection of objects that JavaScript can use to interact with the
-browser to modify the DOM. If you have used document.createElement or
-document.appendChild, you have worked with the DOM API. Updating or changing rendered DOM elements in JavaScript is relatively easy.2
- However, the process of
-inserting new elements is painfully slow.3
- This means if web developers are meticu‐
-lous about how they make changes to UI, they can improve the performance of their
-applications.
+The DOM API is a collection of objects that JavaScript can use to interact with the browser to modify the DOM. 
+If you have used document.createElement or document.appendChild, you have worked with the DOM API. 
+Updating or changing rendered DOM elements in JavaScript is relatively easy.
+ However, the process of inserting new elements is painfully slow.
+ This means if web developers are meticulous about how they make changes to UI, they can improve the performance of their applications.
 Managing DOM changes with JavaScript efficiently can become very complicated
 and time-consuming. From a coding perspective, it is easier to clear all the children
 of a particular element and reconstruct them than it would be to leave those child elements in place and attempt to efficiently update them.4
  The problem is that we may
 not have the time or the advanced knowledge of JavaScript to work efficiently with
 the DOM API every time we build a new application. The solution is React.
-React is a library that is designed to update the browser DOM for us. We no longer have to be concerned with the complexities associated with building performant SPAs because React can do that for us. 
+React is a library that is designed to update the browser DOM for us. 
+We no longer have to be concerned with the complexities associated with building performant SPAs because React can do that for us. 
 With React, we do not interact with the DOM API directly. 
 Instead, we interact with a virtual DOM, or set of instructions that React will use to construct the UI and interact with the browser.
 The virtual DOM is made up of React elements, which conceptually seem similar to HTML elements, but are actually JavaScript objects. 
 It is much faster to work directly with JavaScript objects than it is to work with the DOM API. 
 We make changes to a JavaScript object, the virtual DOM, and React renders those changes for us using the DOM API as efficiently as possible.
 React Elements
+
+
 The browser DOM is made up of DOM elements. Similarly, the React DOM is made up of React elements. 
 DOM elements and React elements may look the same, but they are actually quite different. 
 A React element is a description of what the actual DOM element should look like. 
