@@ -15,9 +15,9 @@ Functional Programming with JavaScript
 10. More complex functions, called higher-order functions, can manipulate functions and use them as either arguments or results or both. 
 11. In the 1930s, Alonzo Church was at Princeton experimenting with these higher-order functions when he invented lambda calculus.
 12. In the late 1950s, John McCarthy took the concepts derived from λ-calculus and applied them to a new programming language called Lisp. 
-Lisp implemented the concept of higher-order functions and functions as first-class members or first-class citizens. 
+13. Lisp implemented the concept of higher-order functions and functions as first-class members or first-class citizens. 
 14. A function is considered a first-class member when it can be declared as a variable and sent to functions as an argument. 
-These functions can even be returned from functions.
+15. These functions can even be returned from functions.
 
 1.当你开始探索 React 编程的世界时，你会注意到函数式编程这个话题出现得非常频繁。
 2.函数式技术正在 JavaScript 项目中被越来越多地使用。
@@ -31,7 +31,7 @@ These functions can even be returned from functions.
 10. 更复杂的函数，称为高阶函数，可以操纵函数 并将它们用作参数或结果，或者两者兼而有之。
 11. 在 1930 年代，Alonzo Church 在普林斯顿实验这些高阶函数时 发明了 λ-演算。
 12. 在 1950 年代末期，John McCarthy 将从 λ-演算中得出的概念 应用于一种名为 Lisp 的新编程语言。
-Lisp 实现了高阶函数和作为一等成员或一等公民的函数的概念。
+13. Lisp 实现了高阶函数和作为一等成员或一等公民的函数的概念。
 14.当一个函数可以被声明为变量并作为参数传递给函数时，它被认为是一个一等成员。
 15.这些函数甚至可以从函数中返回。
 
@@ -80,21 +80,23 @@ We can also add functions to arrays in JavaScript:
 
 CHAPTER 4
 Pure React
-In order to understand how React runs in the browser, we will be working purely with React in this chapter. 
-We will not introduce JSX, or JavaScript as XML, until the next chapter. 
-You may have worked with React in the past without ever looking at the pure React code that is generated when we transpile JSX into React. 
-You can successfully use React without looking at pure React. 
-However, if you take the time to understand what is going on behind the scenes, you will be more efficient, especially when it comes time to debug. 
-That is our goal in this chapter: to look under the hood and understand how React works.
+1. In order to understand how React runs in the browser, we will be working purely with React in this chapter. 
+2. We will not introduce JSX, or JavaScript as XML, until the next chapter. 
+3. You may have worked with React in the past without ever looking at the pure React code that is generated when we transpile JSX into React. 
+4. You can successfully use React without looking at pure React. 
+5. However, if you take the time to understand what is going on behind the scenes, you will be more efficient, especially when it comes time to debug. 
+6. That is our goal in this chapter: to look under the hood and understand how React works.
 Page Setup
-In order to work with React in the browser, we need to include two libraries: React and ReactDOM. React is the library for creating views. 
-ReactDOM is the library used to actually render the UI in the browser.
+7. In order to work with React in the browser, we need to include two libraries: React and ReactDOM. React is the library for creating views. 
+8. ReactDOM is the library used to actually render the UI in the browser.
 ReactDOM
-React and ReactDOM were split into two packages for version 0.14. The release notes
-state: “The beauty and the essence of React has nothing to do with browsers or the
-DOM... This [splitting into two packages] paves the way to writing components that
-can be shared between the web version of React and React Native.”
-Instead of assuming that React will render only in the browser, future releases will aim to support rendering for a variety of platforms.
+9.  React and ReactDOM were split into two packages for version 0.14. The release notes
+    state: “The beauty and the essence of React has nothing to do with browsers or the
+    DOM... This [splitting into two packages] paves the way to writing components that
+    can be shared between the web version of React and React Native.”
+
+
+10. Instead of assuming that React will render only in the browser, future releases will aim to support rendering for a variety of platforms.
 
 
 We also need an HTML element that ReactDOM will use to render the UI. You can
