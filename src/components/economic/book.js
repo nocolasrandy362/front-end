@@ -111,7 +111,7 @@ ReactDOM
 8. ReactDOM 是用于在浏览器中实际渲染用户界面的库。
 9. React 和 ReactDOM 在 0.14 版本中被拆分为两个独立包。
 发布说明中指出：“React 的美感与本质与浏览器或 DOM 无关……
-这种（拆分为两个包的做法）为编写可在 Web 版 React 与 React Native 之间共享的组件铺平了道路。”
+这种（拆分为两个包的做法）为编写'可在 Web 版 React 与 React Native 之间共享'的组件铺平了道路。”
 10. 与其假设 React 只能在浏览器中渲染，未来的版本将 致力于 支持多种平台的渲染。
 
 We also need an HTML element that ReactDOM will use to render the UI. 
