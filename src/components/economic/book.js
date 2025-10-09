@@ -184,20 +184,29 @@ We make changes to a JavaScript object, the virtual DOM, and React renders those
 React Elements
 
 
-The browser DOM is made up of DOM elements. Similarly, the React DOM is made up of React elements. 
-DOM elements and React elements may look the same, but they are actually quite different. 
-A React element is a description of what the actual DOM element should look like. 
-In other words, React elements are the instructions for how the browser DOM should be created.
-We can create a React element to represent an h1 using React.createElement:
+1. The browser DOM is made up of DOM elements. Similarly, the React DOM is made up of React elements. 
+2. DOM elements and React elements may look the same, but they are actually quite different. 
+3. A React element is a description of what the actual DOM element should look like. 
+4. In other words, React elements are the instructions for how the browser DOM should be created.
+5. We can create a React element to represent an h1 using React.createElement:
 React.createElement("h1", null, "Baked Salmon")
-The first argument defines the type of element that we wish to create. 
-In this case, we want to create a heading-one element. The third argument represents the element’s children, any nodes that are inserted between the opening and closing tag. 
-The second argument represents the element’s properties. This h1 currently does not have any properties.
-During rendering, React will convert this element to an actual DOM element:
+6. The first argument defines the type of element that we wish to create. 
+7. In this case, we want to create a heading-one element. The third argument represents the element’s children, any nodes that are inserted between the opening and closing tag. 
+8. The second argument represents the element’s properties. This h1 currently does not have any properties.
+9. During rendering, React will convert this element to an actual DOM element:
 <h1>Baked Salmon</h1>
-When an element has attributes, they can be described with properties. Here is a sample of an HTML h1 tag that has id and data-type attributes:
+10. When an element has attributes, they can be described with properties. Here is a sample of an HTML h1 tag that has id and data-type attributes:
 
-
+1. 浏览器 DOM 由 DOM 元素组成。同样地，React DOM 由 React 元素组成
+2. DOM 元素和 React 元素可能看起来一样，但它们实际上相当不同。
+3. 一个 React 元素是对实际 DOM 元素应有外观的描述。
+4. 换句话说，React 元素是关于浏览器 DOM 应如何被创建的指令
+5. 我们可以使用 React.createElement 创建一个表示 h1 的 React 元素：React.createElement("h1", null, "Baked Salmon")
+6. 第一个参数定义了我们希望创建的元素类型。
+7. 在这种情况下，我们想要创建一个一级标题元素。第三个参数表示该元素的子元素，即任何插入在开始标签和结束标签之间的节点。
+8. 第二个参数表示该元素的属性。这个 h1 当前没有任何属性。
+9. 在渲染期间，React 会将此元素转换为一个实际的 DOM 元素：
+10. 当一个元素具有属性时，它们可以用属性来描述。这是一个具有 id 和 data-type 属性的 HTML h1 标签的示例
 
  * 
  * 
