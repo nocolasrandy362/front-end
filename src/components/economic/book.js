@@ -159,17 +159,17 @@ Let’s say that you have to construct an HTML hierarchy for a recipe. A possibl
 11. Updating or changing rendered DOM elements in JavaScript is relatively easy.However, the process of inserting new elements is painfully slow.
 12. This means if web developers are meticulous about how they make changes to UI, they can improve the performance of their applications.
 
-1.
-2.
-3.
-4.
-5.
-6.
+1. 在HTML中，元素通过一种类似于家族树的层级结构相互关联。
+2. 我们可以说根元素有三个子元素：一个标题、一个配料的无序列表，以及一个用于说明的区域
+3. 传统上，网站由独立的HTML页面组成。
+4. 当用户浏览这些页面时，浏览器会请求并加载不同的HTML文档。AJAX的发明为我们带来了单页应用，即SPA。
+5. 由于浏览器可以使用AJAX请求和加载微小的数据片段，整个Web应用现在可以仅通过一个页面运行，并依赖JavaScript来更新用户界面。
+6. 在单页应用中，浏览器最初加载一个HTML文档。当用户在网站中导航时，他们实际上停留在同一个页面上。
 7.
-8.
-9.
-10.
-11.
+8. 它可能让你感觉好像在页面之间跳转，但实际上你仍然在同一个HTML页面上，而JavaScript正在承担繁重的工作。
+9. DOM API是一组对象，JavaScript可以使用它们与浏览器交互以修改DOM。
+10.如果你使用过document.createElement或document.appendChild，你就已经使用过DOM API。
+11.在JavaScript中更新或更改已渲染的DOM元素相对容易。然而，插入新元素的过程却出奇地缓慢。
 12.这意味着如果Web开发者在如何更改用户界面方面非常谨慎，他们就能提升其应用程序的性能。
 
 
