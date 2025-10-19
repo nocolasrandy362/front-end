@@ -5,7 +5,9 @@
  * 
 Introduction
 What does it mean to have a Bitcoin?
-Many people have heard of Bitcoin, that it's a fully digital currency with no government to issue it, that no banks need to manage accounts and verify transactions, and that no one really knows who invented it.
+Many people have heard of Bitcoin, that it's a fully digital currency with no government to issue it, 
+that no banks need to（There is no need for banks to...） manage accounts and verify transactions, 
+and that no one really knows who invented it.
 And yet many people don't know the answer to this question, at least not in full.
 To get there, and to make sure that the technical details underlying the answer actually feel motivated, we're going to walk through,step by step, how you might have invented your own version of Bitcoin.
 We'll start with you keeping track of payments with your friends using a communal ledger,
