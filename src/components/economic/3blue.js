@@ -33,12 +33,6 @@ So you might keep a communal ledger that records all the payments you intend to 
 Alice pays Bob $20, Bob pays Charlie $40, things like that.
 This ledger is going to be something public and accessible to everyone,like a website where anyone can go and add new lines.
 And let's say at the end of every month you all get together,look at the list of transactions, and settle up.
-
-
-/*********************** */
-/****** 
-
-
 If you spent more than you received, you put that money in the pot,and if you received more than you spent, you take that money out.
 So the protocol for being part of this very simple system might look like this.
 Anyone can add lines to the ledger, and at the end of every month you all get together and settle up.
@@ -63,6 +57,10 @@ All it does is output true or false to indicate if this was a signature produced
 I won't go into the details of how exactly both these functions work, but the idea is that it should be completely infeasible to find a valid signature if you don't know the secret key.
 Specifically, there's no strategy better than just guessing and checking random signatures, which you can check using the public key that everyone knows.
 Now think about how many signatures there are with a length of 256 bits.
+
+
+
+
 That's 2 to the power of 256!
 This is a stupidly large number.
 To call it astronomically large would be giving way too much credit to astronomy.
@@ -77,19 +75,15 @@ Alright, great. Digital signatures remove a huge aspect of trust in this initial
 The ledger is the currency
 But even still, if you were to really do this,
 you would be relying on an honor system of sorts.
-Namely, you're trusting that everyone will actually follow
-through and settle up in cash at the end of each month.
-What if, for example, Charlie racks up thousands
-of dollars in debt and just refuses to show up?
+Namely, you're trusting that everyone will actually follow through and settle up in cash at the end of each month.
+What if, for example, Charlie racks up thousands of dollars in debt and just refuses to show up?
 The only real reason to revert back to cash to settle up is if some people,I'm looking at you Charlie, owe a lot of money.
 So maybe you have the clever idea that you never actually have to settle up in cash as long as you have some way to prevent people from spending too much more than they take in.
 Maybe you start by having everyone pay $100 into the pot,
 and then have the first few lines of the ledger read Alice gets $100, Bob gets $100,
 Charlie gets $100, etc.
-Now, just don't accept any transactions where someone
-is spending more than they already have on that ledger.
-For example, if the first two transactions are Charlie pays Alice $50
-and Charlie pays Bob $50, if he would have tried to add Charlie pays you $20,
+Now, just don't accept any transactions where someone is spending more than they already have on that ledger.
+For example, if the first two transactions are Charlie pays Alice $50 and Charlie pays Bob $50, if he would have tried to add Charlie pays you $20,
 that would be invalid, as invalid as if he had never signed it.
 Notice, this means verifying a transaction requires
 knowing the full history of transactions up to that point.

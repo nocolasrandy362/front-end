@@ -22,4 +22,40 @@ I hope that learning English will give me more choices and empower me to say no 
 我在读书的时候就不是很擅长学外语，我在初中高中阶段，英语一般情况下是不及格的，
 大学的时候通过很大的努力先后通过了英语四级和六级考试，这对于我来说是一个很大的挑战
 
+Now, as a front-end software developer working on internet applications, 
+I’d like to use an online banking app as an example to briefly explain what front-end development is all about.  
+When you open your mobile banking app, everything you see — the login screen, 
+your account balance on the homepage, the transfer interface, the list of financial products, 
+and even pop-up messages — all of that visual and interactive experience is built by front-end developers.  
 
+The back-end, on the other hand, handles the invisible parts: 
+how your account data is stored, how a money transfer is processed, 
+how transaction records are synchronized — basically, the core logic and data processing behind the scenes.
+
+For example, when you enter an amount and tap "Confirm" to make a transfer, 
+the front-end manages the entire user interaction: the button’s response, loading animations, 
+and showing success or error messages. 
+
+But the actual transfer logic — verifying your account, deducting funds, 
+recording the transaction — that’s all handled by the back-end. 
+Once it’s done, the result is sent back to the front-end, 
+which then displays it to you.
+
+
+Now, let’s bring this back to ChatGPT. From a front-end developer’s perspective, 
+I’d like to walk you through how the ChatGPT web version is structured. 
+The ChatGPT web app shows clear characteristics of a Single-Page Application, or SPA. 
+It has a component-based architecture, complex state management, and highly dynamic interactions. 
+
+So, what exactly is a SPA? Unlike traditional websites, 
+where each page navigation triggers a full reload of a new page 
+— which often causes flickering or delays.
+
+SPAs work differently. 
+In a SPA, there’s essentially just one main page. 
+When you “navigate” between sections, 
+the content is dynamically updated within that single page. 
+
+Instead of reloading everything, 
+the front-end simply hides old components and shows new ones, 
+while fetching data in the background asynchronously

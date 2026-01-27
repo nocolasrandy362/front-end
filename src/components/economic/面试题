@@ -1,0 +1,707 @@
+
+# ✅ **inline、block、inline-block 的区别**
+
+## **1. inline（行内元素）**
+
+特点：
+
+* **不独占一行**，多个 inline 元素会在同一行内排列。
+* **宽高无效**：不能通过 `width`/`height` 设置大小，其宽度由内容决定。
+* **padding/margin 仅左右有效**，上下方向可能不生效或不影响布局。
+* 常见元素：`span`、`a`、`strong`
+
+适用场景：
+
+* 做小图标、短文本、按钮的一部分。
+
+---
+
+## **2. block（块级元素）**
+
+特点：
+
+* **独占一整行**（前后会自动换行）。
+* **可以设置宽高**。
+* **填满父容器宽度**（默认 width: 100%）。
+* padding、margin **四个方向都生效**。
+* 常见元素：`div`、`p`、`h1`~`h6`、`ul`
+
+适用场景：
+
+* 做布局容器、模块分区。
+
+---
+
+## **3. inline-block（行内块元素）**
+
+特点（结合 inline + block 的优点）：
+
+* **不独占一行**，可以一行多个。
+* **可设置宽高**。
+* padding 和 margin 四个方向完全有效。
+* 容易出现“空隙问题”（元素之间的空白字符会产生 4px 左右间距）。
+
+常见用途：
+
+* 导航栏项目（水平排列但需要宽高）
+* 带尺寸的小组件：按钮、徽标、标签
+
+---
+
+# ✅ **核心区别快速记忆**
+
+| 属性/行为              | inline | block   | inline-block |
+| ------------------ | ------ | ------- | ------------ |
+| 是否换行               | ❌ 不换   | ✅ 换行    | ❌ 不换         |
+| 宽高是否可设置            | ❌ 不可   | ✅ 可     | ✅ 可          |
+| padding/margin 四方向 | 部分支持   | 全支持     | 全支持          |
+| 默认宽度               | 内容宽度   | 父级 100% | 内容宽度         |
+
+---
+
+# ⭐ **一句话总结（背面试版）**
+
+> **inline 不支持宽高；block 独占一行；inline-block 既能设置宽高又能同行排列。**
+
+--------------------------------------------------------------------------------------
+
+
+
+
+
+# ✅ **display 属性介绍（面试版）**
+
+`display` 用来设置元素的显示类型，是 CSS 布局的重要基础。不同的 display 值会改变元素在页面中的排布方式、是否换行、是否能设置宽高等。
+
+
+# ⭐ 常见的 display 类型（必会）
+
+## **1. display: block**
+
+* 元素独占一行
+* 可以设置宽高、margin、padding
+* 默认宽度撑满父容器
+* 例子：`div`, `p`, `ul`
+
+---
+
+## **2. display: inline**
+
+* 不独占一行，可与其他 inline 元素同行
+* **不能设置 width / height**
+* margin/padding 的上下方向可能不生效
+* 例子：`span`, `a`
+
+---
+
+## **3. display: inline-block**
+
+* 不独占一行（像 inline）
+* 可设置宽高（像 block）
+* 常用于做按钮、菜单项、徽标等
+
+---
+
+## **4. display: none**
+
+* 元素完全从文档流移除
+* 不占空间，不能被点击
+
+---
+
+## **5. display: flex**
+
+* 启用 Flex 布局
+* 主要用于 **一维布局（水平/垂直）**
+* 常用属性：`justify-content`、`align-items`、`flex-direction`
+
+---
+
+## **6. display: grid**
+
+* 启用 Grid 布局
+* **二维布局**神器（行 + 列）
+* 常用：`grid-template-columns`, `gap`
+
+---
+
+## **7. display: inline-flex**
+
+* 类似 flex，但本身作为行内元素排列
+* 常用于需要对内部用 flex 布局，但自身不占一整行的组件
+
+---
+
+## **8. display: inline-grid**
+
+* 与 inline-flex 类似，但布局方式是 grid
+
+
+# 🎯 一句话总结（背诵版）
+
+> `display` 决定了元素在文档流中的布局方式。常用值包括 block、inline、inline-block、none、flex、grid，其中 flex 和 grid 是现代布局的核心。
+
+
+
+
+
+
+下面是一个 **真正面试可直接复述的“简要版 Flex 布局介绍”**，短、准、完整👇
+
+---
+
+# ✅ **简要介绍 Flex 布局（面试答案）**
+
+**Flex（弹性盒子）布局**是一种用于构建 **一维布局**（水平或垂直）的 CSS 布局方式。通过设置 `display: flex`，父元素变为 flex 容器，子元素自动按弹性规则排列。
+
+Flex 布局的核心优势是：
+
+* **轻松实现水平和垂直居中**
+* **子元素可自动分配剩余空间（flex: 1）**
+* **布局灵活，可适配不同屏幕**
+* 不再依赖 float、table、定位等旧方案
+
+主要属性包括：
+
+* **flex-direction**：设置主轴方向（row / column）
+* **justify-content**：主轴对齐方式
+* **align-items**：交叉轴对齐方式
+* **flex-wrap**：是否换行
+* **flex**：控制子元素占用空间（flex: 1 等分常用）
+
+如果主轴是 横向（row），交叉轴就是 垂直方向
+
+如果主轴是 纵向（column），交叉轴就是 水平方向
+一句话总结：
+
+Flex 是用来做一维方向的弹性布局，通过简单属性即可控制元素的排列、对齐和空间分配，是现代前端最常用的布局方式之一
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+position 的五种主要取值
+
+CSS position 一共有 5 种最常用值（标准部分），分别是：
+
+1️⃣ static（默认值）
+
+元素遵循正常文档流 (Normal Flow)
+
+top / right / bottom / left / z-index 均无效
+
+所有元素默认都是 static
+
+✔ 使用场景：一般布局，不需要脱离文档流。
+
+2️⃣ relative（相对定位）
+
+相对自身原来的位置进行偏移
+
+元素 仍然占据原来的空间
+
+可使用 top/right/bottom/left 调整偏移
+
+常与 absolute 搭配使用（作为定位容器）
+
+✔ 使用场景：当你想稍微移动元素，或作为 absolute 的定位父级。
+
+3️⃣ absolute（绝对定位）
+
+完全脱离文档流
+
+相对于 最近的非 static 父元素 定位
+如果没有，则相对于 浏览器视口（document.body）
+
+可以自由使用 top/right/bottom/left 进行精确定位
+
+✔ 使用场景：弹窗、悬浮、图标吸附、气泡提示 Tooltip。
+
+4️⃣ fixed（固定定位）
+
+脱离文档流
+
+相对于浏览器窗口 定位（即使页面滚动也不变）
+
+常用于浮动按钮、悬浮导航条等
+
+✔ 使用场景：吸顶导航、回到顶部按钮、悬浮广告。
+
+5️⃣ sticky（粘性定位）
+
+在一定范围内表现为 relative
+
+滚动到一定位置后 改为 fixed 效果
+
+生效前提：父容器必须允许它滚动到临界位置
+
+✔ 使用场景：列表标题吸顶、表格列吸附。
+
+
+
+================================================================
+在一个卡片（card）右上角显示一个红色的“NEW”标签。
+
+✅ 示例 1：使用 relative + absolute 配合（最常见用法）
+
+Html
+<div class="card">
+  <div class="badge">NEW</div>
+  <p>这是一张商品卡片</p>
+</div>
+
+.card {
+  width: 200px;
+  height: 150px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  position: relative; /* 👈 关键：让 .badge 相对于它定位 */
+}
+
+.badge {
+  position: absolute; /* 👈 脱离文档流，相对于最近的非 static 祖先 */
+  top: 0;
+  right: 0;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+}
+
+✅ 示例 2：单独使用 relative（仅自身偏移）
+
+<p>第一段文字</p>
+<div class="box">我是一个 relative 盒子</div>
+<p>第二段文字</p>
+
+.box {
+  position: relative;
+  top: 20px;
+  left: 30px;
+  background: lightblue;
+  width: 150px;
+  height: 50px;
+}
+
+✅ 示例 3：单独使用 absolute（无定位祖先）
+<div class="container">
+  <div class="absolute-box">我是 absolute</div>
+</div>
+
+.container {
+  width: 300px;
+  height: 200px;
+  margin: 50px;
+  border: 1px dashed gray;
+  /* 注意：这里没有设置 position */
+}
+
+.absolute-box {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: orange;
+  color: white;
+}
+
+因为 .container 是默认 position: static，不能作为定位参考。
+所以 .absolute-box 会一直向上找，直到 <html> 根元素（即视口）。
+结果：它出现在整个页面的 (10px, 10px) 位置，而不是容器内部！
+================================================================
+
+
+
+
+
+一、JavaScript（必问，核心中的核心）
+1️⃣ 基础 & 原理
+
+var / let / const 区别
+
+JS 数据类型有哪些？typeof null 是什么？
+
+== 和 === 的区别
+
+原型 / 原型链是什么？
+
+this 指向（普通函数 / 箭头函数 / call、apply、bind）
+
+闭包是什么？有什么应用和问题？
+
+作用域链是什么？
+
+2️⃣ 异步 & 事件循环（非常高频）
+
+Promise 的三种状态
+
+then 是微任务还是宏任务？
+
+async / await 本质是什么？
+
+事件循环（Event Loop）执行顺序
+
+setTimeout(fn, 0) 一定立即执行吗？
+
+微任务 / 宏任务有哪些？
+
+二、Vue（你是前端，这块基本逃不掉）
+1️⃣ Vue 基础
+
+Vue2 / Vue3 响应式原理
+
+data 为什么是函数？
+
+v-if 和 v-show 区别
+
+computed 和 watch 区别（超高频）
+
+key 的作用
+
+2️⃣ 组件 & 通信
+
+父子组件通信方式
+
+跨组件通信怎么做？
+
+props 为什么不能直接修改？
+
+emit 的原理
+
+3️⃣ Vue 性能优化
+
+为什么用 computed？
+
+列表渲染优化（虚拟滚动）
+
+keep-alive 的作用
+
+如何减少不必要的渲染？
+
+三、浏览器原理（中高级面试官很爱）
+
+浏览器渲染流程
+
+重排（reflow）和重绘（repaint）
+
+如何减少重排？
+
+输入 URL 到页面展示发生了什么？
+
+跨域是什么？怎么解决？
+
+Cookie / localStorage / sessionStorage 区别
+
+四、HTML / CSS（不会很难，但会问）
+
+BFC 是什么？怎么触发？
+
+Flex 常用属性
+
+垂直居中有哪些方案？
+
+position 有哪些？
+
+display: none 和 visibility: hidden 区别
+
+z-index 生效条件
+
+五、网络 & 安全（越来越常问）
+
+HTTP / HTTPS 区别
+
+TCP 三次握手
+
+常见状态码（200 / 301 / 302 / 304 / 401 / 403 / 404 / 500）
+
+强缓存 / 协商缓存
+
+XSS / CSRF 是什么？怎么防？
+
+六、工程化（简历有项目基本都会问）
+
+webpack 做了什么？
+
+loader 和 plugin 区别
+
+vite 为什么快？
+
+打包体积优化手段
+
+CI/CD 有没有了解？
+
+前端如何做错误监控？
+
+七、算法（前端面试“下限”）
+
+高频类型：
+
+两数之和（Map）
+
+字符串 / 数组
+
+双指针
+
+滑动窗口
+
+简单 DP（零钱兑换你刚刚就在学 👍）
+
+面试官最爱追问的 3 个点（重点❗）
+
+你为什么这样写？
+
+有没有更好的方案？
+
+这个在项目中怎么用？
+
+👉 所以不是“会不会写”，而是“你知不知道为什么”。
+
+
+
+
+
+
+------------------------------------------------------------------------
+
+# 🔥 更全面的前端面经题库（2 年经验 · 高频 + 中频 + 加分）
+
+---
+
+# 1️⃣ JavaScript（更全面）
+
+## A. 高频（必会）
+
+* var/let/const 区别
+* 作用域、作用域链
+* this 指向（四种情况）
+* 原型链、继承
+* 闭包、事件循环
+* Promise、async/await
+* 防抖/节流
+* 深拷贝/浅拷贝
+* map/filter/reduce
+* Map/Set vs Object
+* 事件冒泡/捕获
+* 绑定 call/apply/bind
+* 作用域污染
+
+## B. 中频（建议掌握）
+
+* new 做了什么
+* instanceof 原理
+* 垃圾回收机制（GC）
+* Symbol 的作用
+* Proxy/Reflect
+* Generator（迭代器）
+* setTimeout 原理
+* 事件循环（图）
+* 函数柯里化
+* 设计模式（单例、观察者、工厂）
+
+## C. 加分（2 年也可能被问）
+
+* 执行上下文（Execution Context）
+* 作用域与闭包关系
+* JS 引擎 V8 运行机制（基本了解）
+* 模块化（ESM vs CommonJS）
+* 事件委托原理 + 实现
+* 内存泄漏（闭包、定时器、DOM 引用等）
+
+---
+
+# 2️⃣ Vue（更全面）
+
+## A. 高频
+
+* Vue 响应式原理（Vue2 + Vue3）
+* computed vs watch
+* v-if vs v-show
+* key 的作用
+* 组件通信
+* slot 插槽
+* 生命周期（created/mounted/...）
+* nextTick
+* Vue 性能优化（keep-alive、虚拟 DOM）
+
+## B. 中频
+
+* Vue3 Composition API（setup、ref、reactive）
+* 路由守卫（beforeEach / beforeRouteEnter）
+* Vuex/Pinia 设计思路
+* 组件懒加载
+* 动画过渡（transition）
+
+## C. 加分
+
+* 自定义指令（directive）
+* 自定义插件（plugin）
+* 自定义事件总线（event bus）
+* 组件设计模式（高阶组件 / renderless 组件）
+* SSR（Nuxt / Vue SSR 简单原理）
+
+---
+
+# 3️⃣ CSS（补齐“面试容易漏”的点）
+
+## A. 高频
+
+* 盒模型（box-sizing）
+* display（block/inline/inline-block）
+* position（relative/absolute/fixed/sticky）
+* flex 布局（常用属性）
+* 垂直居中方案
+* z-index 原理
+* 伪元素（::before / ::after）
+* overflow 及滚动处理
+
+## B. 中频
+
+* BFC（块级格式化上下文）
+* CSS 优先级（权重）
+* Grid 布局基础
+* CSS 变量（var）
+* CSS 动画（transition / animation）
+
+## C. 加分
+
+* CSS 预处理器（Sass / Less）
+* 响应式布局（rem/vw/vh）
+* 移动端适配（viewport / 媒体查询）
+* 视觉性能（合成层 / GPU 加速）
+
+---
+
+# 4️⃣ 浏览器 & 性能（更全面）
+
+## A. 高频
+
+* 浏览器渲染流程
+* 重排/重绘
+* 事件委托
+* 缓存机制（强缓存/协商缓存）
+* 输入 URL 到页面渲染过程
+
+## B. 中频
+
+* 性能指标（FCP/LCP/FID）
+* requestAnimationFrame
+* 资源预加载（preload/prefetch）
+* 资源压缩（gzip / brotli）
+* 图片优化（WebP / 懒加载）
+
+## C. 加分
+
+* 内存泄漏排查
+* 性能监控（RUM / APM）
+* Web Worker
+* 线程模型（主线程/渲染线程）
+
+---
+
+# 5️⃣ 网络（更全面）
+
+## A. 高频
+
+* HTTP / HTTPS 区别
+* 状态码
+* GET/POST 区别
+* 跨域与 CORS
+* TCP 三次握手
+
+## B. 中频
+
+* HTTP2 / HTTP3 优化
+* 长连接 vs 短连接
+* CDN 原理
+* WebSocket 原理
+
+## C. 加分
+
+* QUIC 协议
+* 负载均衡策略（轮询、加权、IP hash）
+* 反向代理（Nginx）基础
+
+---
+
+# 6️⃣ 工程化（更全面）
+
+## A. 高频
+
+* webpack / vite 区别
+* loader vs plugin
+* tree shaking
+* 代码分割
+* source map
+
+## B. 中频
+
+* 环境变量
+* 依赖管理（package-lock）
+* 打包优化（压缩、CDN、按需加载）
+* 自动化部署（CI/CD）
+
+## C. 加分
+
+* monorepo（lerna / pnpm workspace）
+* 前端性能预算
+* 静态资源版本管理
+
+---
+
+# 7️⃣ TypeScript（如果你写了 TS，必须掌握）
+
+（2 年经验如果写过 TS，面试必问）
+
+* 类型基础（interface / type）
+* 联合类型 / 交叉类型
+* 泛型
+* 类型推断
+* 装饰器基础
+* tsconfig 常用配置
+
+---
+
+# 8️⃣ 算法（更全面但仍适合前端）
+
+## A. 高频
+
+* 两数之和
+* 有效括号
+* 最长不重复子串（滑动窗口）
+* 反转链表
+* 二分查找
+
+## B. 中频
+
+* 三数之和
+* 合并区间
+* BFS/DFS 基础
+* 简单 DP（爬楼梯 / 零钱兑换）
+
+## C. 加分
+
+* LRU 缓存实现
+* TopK / 堆
+* 链表进阶题（中级）
+
+---
+
+# 9️⃣ 项目 & 场景题（加分点）
+
+* 项目介绍（你负责什么？）
+* 你遇到的最大难点是什么？怎么解决？
+* 线上 bug 怎么排查？
+* 性能优化做了哪些？效果如何？
+* 组件如何设计复用？
+* 接口异常处理策略
+* 你如何做前后端协作？
+
+---
+
+# 🎯 你现在的“面试覆盖率”已经接近 95%+
+
+如果你把以上题库都能回答清楚，基本：
+
+* 初级/中级岗位你都能拿到
+* 也能应对“偏技术”的面试官追问
+
+---
