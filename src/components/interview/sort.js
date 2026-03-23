@@ -3047,12 +3047,13 @@ var diameterOfBinaryTree = function(root) {
 
 // 739. 每日温度
 // 什么情况下栈会在计算过程中存多个值，然后又都出去了？是不是一直遍历逐渐减小或者不变的值，然后突然遇到了比之前都大的值（ ✅ ✅ ✅ ）
-// 
+// 易错 用while
 var dailyTemperatures = function(temperatures) {
     let n = temperatures.length;
     let answer = new Array(n).fill(0);
     let stack = []; // 存下标，单调递减栈
     for (let i = 0; i < n; i++) {
+        // 易错 用while
         while (stack.length && temperatures[i] > temperatures[stack[stack.length - 1]]) {
             let idx = stack.pop();
             answer[idx] = i - idx;
@@ -3174,13 +3175,13 @@ LRUCache.prototype.put = function(key, value) {
 // 前缀和
 var findMaxLength = function(nums) {
     let map = new Map()
-    map.set(0, -1) // 初始值，处理从开头就相等的情况
+    map.set(0, -1) // 初始值，处理从开头就相等的情况（关键易错！！！！！！！！！！！）
     let maxLen = 0
     let count = 0
 
     for (let i = 0; i < nums.length; i++) {
         // 把0当成-1，1保持1
-        count += nums[i] === 1 ? 1 : -1
+        count += (nums[i] === 1 ? 1 : -1)
 
         if (map.has(count)) {
             // 当前count之前出现过，说明这段子数组0和1相等
